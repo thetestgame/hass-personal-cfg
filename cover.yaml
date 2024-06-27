@@ -1,0 +1,15 @@
+- platform: template
+  covers:
+    living_main_window_blinds:
+      device_class: blind
+      unique_id: "sensa_living_main_window_blinds"
+      friendly_name: "Living Room Main Window Blinds"
+      open_cover:
+        service: rest_command.open_living_main_window_blinds
+      close_cover:
+        service: rest_command.close_living_main_window_blinds
+      #set_cover_position:
+      #  service: rest_command.set_living_main_window_blinds
+      #  data_template:
+      #    position: "{{position}}"
+      #position_template: "{{ (state_attr('sensor.living_main_window_blinds_state', 'Position') + 100) | abs }}"

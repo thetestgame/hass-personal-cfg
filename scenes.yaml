@@ -1,0 +1,4845 @@
+- id: '1674198143518'
+  name: 'Office Animal Kingdom '
+  entities:
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 164.722
+      - 84.706
+      rgb_color:
+      - 39
+      - 255
+      - 200
+      xy_color:
+      - 0.1626
+      - 0.437
+      effect: None
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'on'
+    light.office_nanoleafs:
+      supported_color_modes:
+      - color_temp
+      - hs
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      color_mode: hs
+      brightness: 252
+      hs_color:
+      - 127.333
+      - 49
+      rgb_color:
+      - 130
+      - 255
+      - 145
+      xy_color:
+      - 0.241
+      - 0.516
+      entity_id:
+      - light.office_train_shelf_light
+      - light.office_printer_lines
+      - light.office_vertical_lines
+      state: 'on'
+    light.office_accent_lighting:
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      color_mode: xy
+      brightness: 251
+      hs_color:
+      - 97.229
+      - 65.098
+      rgb_color:
+      - 152
+      - 255
+      - 89
+      xy_color:
+      - 0.2897
+      - 0.5814
+      effect: None
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_oil_diffuser_lightbulb
+      - light.office_lamp_2
+      state: 'on'
+  icon: mdi:tree
+  metadata:
+    light.office_wall_lights:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+- id: '1674258559780'
+  name: Office Work
+  entities:
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 0
+      - 0.392
+      rgb_color:
+      - 255
+      - 254
+      - 254
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: None
+      state: 'on'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_lamp_2
+      - light.hue_play_1_2
+      - light.hue_play_1
+      - light.hue_play_1_4
+      - light.hue_play_1_3
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      color_mode: xy
+      brightness: 253
+      hs_color:
+      - 0
+      - 0.392
+      rgb_color:
+      - 255
+      - 254
+      - 254
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: None
+      state: 'on'
+    light.office_decorations:
+      supported_color_modes:
+      - onoff
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.couch_neon_signs
+      - light.ghost_neon_sign
+      icon: mdi:lightbulb-group
+      friendly_name: Office Decorations
+      supported_features: 0
+      color_mode: onoff
+      state: 'on'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Slow lightning
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      color_mode: hs
+      brightness: 249
+      hs_color:
+      - 69
+      - 7
+      rgb_color:
+      - 252
+      - 255
+      - 237
+      xy_color:
+      - 0.331
+      - 0.348
+      state: 'on'
+    light.office_star_projector:
+      supported_color_modes:
+      - brightness
+      - hs
+      friendly_name: Office Star Projector
+      supported_features: 0
+      state: 'off'
+  icon: mdi:briefcase
+  metadata:
+    light.office_wall_lights:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_star_projector:
+      entity_only: true
+- id: '1674264454757'
+  name: Office Disney Springs
+  entities:
+    light.office_wall_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 55.052
+      - 76.078
+      rgb_color:
+      - 255
+      - 239
+      - 61
+      xy_color:
+      - 0.4529
+      - 0.4861
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 1
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 252.371
+      - 38.039
+      rgb_color:
+      - 178
+      - 158
+      - 255
+      xy_color:
+      - 0.2651
+      - 0.2077
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 2
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 23.704
+      - 63.529
+      rgb_color:
+      - 255
+      - 157
+      - 93
+      xy_color:
+      - 0.5331
+      - 0.3728
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 3
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 4.054
+      - 87.059
+      rgb_color:
+      - 255
+      - 48
+      - 33
+      xy_color:
+      - 0.68
+      - 0.3059
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 4
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_left_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Left
+      supported_features: 44
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 4.054
+      - 87.059
+      rgb_color:
+      - 255
+      - 48
+      - 33
+      xy_color:
+      - 0.68
+      - 0.3059
+      effect: None
+      state: 'on'
+    light.couch_left_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 4
+      supported_features: 44
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 225.789
+      - 59.608
+      rgb_color:
+      - 103
+      - 139
+      - 255
+      xy_color:
+      - 0.1851
+      - 0.1632
+      effect: None
+      state: 'on'
+    light.couch_right_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 2
+      supported_features: 44
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 252.371
+      - 38.039
+      rgb_color:
+      - 178
+      - 158
+      - 255
+      xy_color:
+      - 0.2651
+      - 0.2077
+      effect: None
+      state: 'on'
+    light.media_center_ambience_right_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Right
+      supported_features: 44
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 23.704
+      - 63.529
+      rgb_color:
+      - 255
+      - 157
+      - 93
+      xy_color:
+      - 0.5331
+      - 0.3728
+      effect: None
+      state: 'on'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 244
+      hs_color:
+      - 139.667
+      - 57.333
+      rgb_color:
+      - 108
+      - 255
+      - 156
+      xy_color:
+      - 0.215
+      - 0.507
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'on'
+    light.hue_play_1_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 23.704
+      - 63.529
+      rgb_color:
+      - 255
+      - 157
+      - 93
+      xy_color:
+      - 0.5331
+      - 0.3728
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 1
+      supported_features: 40
+      state: 'on'
+    light.hue_play_1_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 151
+      hs_color:
+      - 252.371
+      - 38.039
+      rgb_color:
+      - 178
+      - 158
+      - 255
+      xy_color:
+      - 0.2651
+      - 0.2077
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 3
+      supported_features: 40
+      state: 'on'
+  icon: mdi:basket
+  metadata:
+    light.office_nanoleafs:
+      entity_only: true
+- id: '1674417906987'
+  name: Arcade
+  entities:
+    light.office_wall_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 191.379
+      - 68.235
+      rgb_color:
+      - 81
+      - 222
+      - 255
+      xy_color:
+      - 0.17
+      - 0.29
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 1
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 10.118
+      - 100
+      rgb_color:
+      - 255
+      - 43
+      - 0
+      xy_color:
+      - 0.6915
+      - 0.3083
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 2
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 10.118
+      - 100
+      rgb_color:
+      - 255
+      - 43
+      - 0
+      xy_color:
+      - 0.6915
+      - 0.3083
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 3
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 255.059
+      - 100
+      rgb_color:
+      - 64
+      - 0
+      - 255
+      xy_color:
+      - 0.1532
+      - 0.0475
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 4
+      supported_features: 44
+      state: 'on'
+    light.couch_left_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 255.059
+      - 100
+      rgb_color:
+      - 64
+      - 0
+      - 255
+      xy_color:
+      - 0.1532
+      - 0.0475
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 4
+      supported_features: 44
+      state: 'on'
+    light.couch_right_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 64.398
+      - 74.902
+      rgb_color:
+      - 241
+      - 255
+      - 64
+      xy_color:
+      - 0.4185
+      - 0.5133
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 2
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_left_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 198.367
+      - 76.863
+      rgb_color:
+      - 59
+      - 195
+      - 255
+      xy_color:
+      - 0.1583
+      - 0.2447
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Left
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_right_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 255.059
+      - 100
+      rgb_color:
+      - 64
+      - 0
+      - 255
+      xy_color:
+      - 0.1532
+      - 0.0475
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Right
+      supported_features: 44
+      state: 'on'
+    light.office_lamp_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Office Lamp
+      supported_features: 40
+      state: unavailable
+    light.office_decorations:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.couch_neon_signs
+      - light.ghost_neon_sign
+      icon: mdi:lightbulb-group
+      friendly_name: Office Decorations
+      supported_features: 0
+      state: 'on'
+    light.smart_humidifier_2207148525207564110148e1e99a6b4f:
+      effect_list:
+      - Rainbow
+      - Color
+      - Temperature
+      supported_color_modes:
+      - rgb
+      friendly_name: Office Essential Oil Diffuser
+      supported_features: 4
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 357.176
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 12
+      xy_color:
+      - 0.698
+      - 0.298
+      effect: Rainbow
+      state: 'on'
+    light.hue_play_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 48.177
+      - 79.608
+      rgb_color:
+      - 255
+      - 215
+      - 52
+      xy_color:
+      - 0.4846
+      - 0.4637
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Left
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 10.118
+      - 100
+      rgb_color:
+      - 255
+      - 43
+      - 0
+      xy_color:
+      - 0.6915
+      - 0.3083
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Right
+      supported_features: 44
+      state: 'on'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 153
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      effect: Good Vibes
+      state: 'on'
+    light.hue_play_1_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      hs_color:
+      - 239.02
+      - 96.078
+      rgb_color:
+      - 10
+      - 14
+      - 255
+      xy_color:
+      - 0.136
+      - 0.041
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 1
+      supported_features: 40
+      state: 'on'
+    light.hue_play_1_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      hs_color:
+      - 358.824
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 5
+      xy_color:
+      - 0.7
+      - 0.299
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 3
+      supported_features: 40
+      state: 'on'
+  icon: mdi:controller
+  metadata:
+    light.office_decorations:
+      entity_only: true
+    light.smart_humidifier_2207148525207564110148e1e99a6b4f:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+- id: '1675634495482'
+  name: Jordan's Room Bright
+  entities:
+    light.jordan_s_room_ceiling_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Jordan's Room Ceiling Light 1
+      supported_features: 40
+      state: 'on'
+    light.jordan_s_room_ceiling_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Jordan's Room Ceiling Light 2
+      supported_features: 40
+      state: 'on'
+    light.jordan_s_room_ceiling_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Jordan's Room Ceiling Light 3
+      supported_features: 40
+      state: 'on'
+    light.jordan_s_room_ceiling_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Jordan's Room Ceiling Light 4
+      supported_features: 40
+      state: 'on'
+    light.jordan_room_display_cases:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      - onoff
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      entity_id:
+      - light.display_case_1_2
+      - light.warcraft_curio_cabinet_2
+      icon: mdi:light-switch
+      friendly_name: Jordan Room Display Cases
+      supported_features: 40
+      state: 'on'
+  icon: mdi:lightbulb
+  metadata:
+    light.jordan_room_display_cases:
+      entity_only: true
+- id: '1675634530594'
+  name: Jordan's Room Off
+  entities:
+    light.jordan_s_room_ceiling_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 1
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      state: 'off'
+    light.jordan_s_room_ceiling_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 2
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      state: 'off'
+    light.jordan_s_room_ceiling_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 3
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      state: 'off'
+    light.jordan_s_room_ceiling_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 4
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      state: 'off'
+    light.warcraft_curio_cabinet_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      mode: normal
+      dynamics: none
+      friendly_name: Warcraft Curio Cabinet
+      supported_features: 40
+      state: 'off'
+  icon: mdi:lightbulb-off
+  metadata: {}
+- id: '1675634710813'
+  name: Jordan's Room Nightlight
+  entities:
+    light.jordan_s_room_ceiling_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 1
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      color_mode: color_temp
+      brightness: 8
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      state: 'on'
+    light.jordan_s_room_ceiling_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 2
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      color_mode: color_temp
+      brightness: 8
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      state: 'on'
+    light.jordan_s_room_ceiling_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 3
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      color_mode: color_temp
+      brightness: 8
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      state: 'on'
+    light.jordan_s_room_ceiling_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Jordan's Room Ceiling Light 4
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      color_mode: color_temp
+      brightness: 8
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      state: 'on'
+    light.warcraft_curio_cabinet_2:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      mode: normal
+      dynamics: none
+      friendly_name: Warcraft Curio Cabinet
+      supported_features: 40
+      state: 'off'
+  icon: mdi:moon-waning-crescent
+  metadata: {}
+- id: '1675733316533'
+  name: Temple Fire
+  entities:
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_oil_diffuser_lightbulb
+      - light.office_lamp_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'off'
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 174
+      hs_color:
+      - 28.218
+      - 79.216
+      rgb_color:
+      - 255
+      - 148
+      - 53
+      xy_color:
+      - 0.5724
+      - 0.3845
+      effect: fire
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'on'
+    light.office_decorations:
+      supported_color_modes: []
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Decorations
+      supported_features: 0
+      state: 'off'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 249
+      hs_color:
+      - 127
+      - 49
+      rgb_color:
+      - 130
+      - 255
+      - 144
+      xy_color:
+      - 0.242
+      - 0.517
+      entity_id:
+      - light.office_train_shelf_light
+      - light.office_printer_lines
+      - light.office_vertical_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'on'
+  icon: mdi:pyramid
+  metadata:
+    light.office_accent_lighting:
+      entity_only: true
+    light.office_wall_lights:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+- id: '1675999342024'
+  name: Office Code Red
+  entities:
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'off'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_oil_diffuser_lightbulb
+      - light.office_lamp_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      color_mode: xy
+      brightness: 250
+      hs_color:
+      - 9.882
+      - 100
+      rgb_color:
+      - 255
+      - 42
+      - 0
+      xy_color:
+      - 0.691867
+      - 0.307333
+      effect: None
+      state: 'on'
+    light.office_decorations:
+      supported_color_modes: []
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Decorations
+      supported_features: 0
+      state: 'off'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 245
+      hs_color:
+      - 282.333
+      - 83
+      rgb_color:
+      - 192
+      - 43
+      - 255
+      xy_color:
+      - 0.3
+      - 0.124
+      entity_id:
+      - light.office_train_shelf_light
+      - light.office_printer_lines
+      - light.office_vertical_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'on'
+  icon: mdi:alarm-light
+  metadata:
+    light.office_wall_lights:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+- id: '1676239167256'
+  name: Coffee Shop
+  entities:
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 44.384
+      - 28.627
+      rgb_color:
+      - 255
+      - 236
+      - 182
+      xy_color:
+      - 0.385
+      - 0.384
+      effect: None
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'on'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      hs_color:
+      - 30
+      - 43.137
+      rgb_color:
+      - 255
+      - 200
+      - 145
+      xy_color:
+      - 0.443
+      - 0.379
+      effect: None
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_oil_diffuser_lightbulb
+      - light.office_lamp_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'on'
+    light.office_decorations:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.couch_neon_signs
+      - light.ghost_neon_sign
+      icon: mdi:lightbulb-group
+      friendly_name: Office Decorations
+      supported_features: 0
+      state: 'on'
+    light.office_nanoleafs:
+      supported_color_modes:
+      - color_temp
+      - hs
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      color_mode: hs
+      brightness: 206
+      hs_color:
+      - 42
+      - 78.5
+      rgb_color:
+      - 255
+      - 194
+      - 54
+      xy_color:
+      - 0.511
+      - 0.438
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      state: 'on'
+  icon: mdi:coffee
+  metadata:
+    light.office_wall_lights:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+- id: '1677281204813'
+  name: Office Purple
+  entities:
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 247
+      hs_color:
+      - 285
+      - 71
+      rgb_color:
+      - 209
+      - 73
+      - 255
+      xy_color:
+      - 0.32
+      - 0.147
+      entity_id:
+      - light.office_train_shelf_light
+      - light.office_printer_lines
+      - light.office_vertical_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'on'
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 284.86
+      - 83.922
+      rgb_color:
+      - 201
+      - 41
+      - 255
+      xy_color:
+      - 0.312
+      - 0.127
+      effect: None
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'on'
+    light.office_decorations:
+      supported_color_modes: []
+      color_mode: onoff
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Decorations
+      supported_features: 0
+      state: 'on'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 251
+      hs_color:
+      - 285
+      - 70.588
+      rgb_color:
+      - 210
+      - 75
+      - 255
+      xy_color:
+      - 0.320667
+      - 0.146333
+      effect: None
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_oil_diffuser_lightbulb
+      - light.office_lamp_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'on'
+  icon: mdi:alarm-light-outline
+  metadata:
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_wall_lights:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+- id: '1684361826076'
+  name: Main Street
+  entities:
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      color_mode: xy
+      brightness: 171
+      hs_color:
+      - 60.811
+      - 29.02
+      rgb_color:
+      - 254
+      - 255
+      - 181
+      xy_color:
+      - 0.372
+      - 0.406
+      effect: None
+      state: 'on'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 173
+      hs_color:
+      - 180
+      - 42
+      rgb_color:
+      - 147
+      - 255
+      - 255
+      xy_color:
+      - 0.216
+      - 0.337
+      entity_id:
+      - light.office_train_shelf_light
+      - light.office_printer_lines
+      - light.office_vertical_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'on'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - hs
+      - xy
+      color_mode: xy
+      brightness: 153
+      hs_color:
+      - 179.189
+      - 29.02
+      rgb_color:
+      - 181
+      - 255
+      - 254
+      xy_color:
+      - 0.246833
+      - 0.3355
+      effect: None
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_oil_diffuser_lightbulb
+      - light.office_lamp_2
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'on'
+  icon: mdi:town-hall
+  metadata:
+    light.office_wall_lights:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+- id: '1684612430472'
+  name: Office Pirates Queue Ambience
+  entities:
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Atomic
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Japanese Streets
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Nanoversary
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Slow lightning
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:triangle-outline
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'off'
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 215
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 27.512
+      - 80.392
+      rgb_color:
+      - 255
+      - 144
+      - 50
+      xy_color:
+      - 0.5786
+      - 0.3818
+      effect: None
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'on'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 215
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 27.512
+      - 80.392
+      rgb_color:
+      - 255
+      - 144
+      - 50
+      xy_color:
+      - 0.5786
+      - 0.3818
+      effect: None
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_lamp_2
+      - light.hue_play_1_2
+      - light.hue_play_1
+      - light.hue_play_1_4
+      - light.hue_play_1_3
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'on'
+    light.office_lamp_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Office Lamp
+      supported_features: 40
+      state: unavailable
+    light.office_decorations:
+      supported_color_modes:
+      - onoff
+      icon: mdi:flower
+      friendly_name: Office Decorations
+      supported_features: 0
+      color_mode:
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.ghost_neon_sign
+      - light.zelda_string_lights
+      state: 'off'
+    light.smart_humidifier_2207148525207564110148e1e99a6b4f:
+      effect_list:
+      - Rainbow
+      - Color
+      - Temperature
+      supported_color_modes:
+      - rgb
+      color_mode:
+      brightness:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      friendly_name: Office Oil Diffuser
+      supported_features: 4
+      state: 'off'
+  icon: mdi:ship-wheel
+  metadata:
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_wall_lights:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+    light.office_lamp_2:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+    light.smart_humidifier_2207148525207564110148e1e99a6b4f:
+      entity_only: true
+- id: '1692742906760'
+  name: Office Hollywood Tower Hotel
+  entities:
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'off'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 20.806
+      - 48.627
+      rgb_color:
+      - 255
+      - 174
+      - 131
+      xy_color:
+      - 0.480875
+      - 0.36075
+      effect: None
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_lamp_2
+      - light.hue_play_1_2
+      - light.hue_play_1
+      - light.hue_play_1_4
+      - light.hue_play_1_3
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 49.927
+      - 53.725
+      rgb_color:
+      - 255
+      - 232
+      - 118
+      xy_color:
+      - 0.4332
+      - 0.4412
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Office Wall Light 1
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 19.138
+      - 45.49
+      rgb_color:
+      - 255
+      - 176
+      - 139
+      xy_color:
+      - 0.4706
+      - 0.3567
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Office Wall Light 2
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 28.06
+      - 78.824
+      rgb_color:
+      - 255
+      - 148
+      - 54
+      xy_color:
+      - 0.5718
+      - 0.3847
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Office Wall Light 3
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 50.606
+      - 77.647
+      rgb_color:
+      - 255
+      - 224
+      - 57
+      xy_color:
+      - 0.4722
+      - 0.4712
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Office Wall Light 4
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_right_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 28.06
+      - 78.824
+      rgb_color:
+      - 255
+      - 148
+      - 54
+      xy_color:
+      - 0.5718
+      - 0.3847
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Media Center Ambience Right
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_left_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 50.606
+      - 77.647
+      rgb_color:
+      - 255
+      - 224
+      - 57
+      xy_color:
+      - 0.4722
+      - 0.4712
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Media Center Ambience Left
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 324.762
+      - 49.412
+      rgb_color:
+      - 255
+      - 129
+      - 203
+      xy_color:
+      - 0.4284
+      - 0.2454
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Train Shelf Left
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 49.927
+      - 53.725
+      rgb_color:
+      - 255
+      - 232
+      - 118
+      xy_color:
+      - 0.4332
+      - 0.4412
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Train Shelf Right
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 28.06
+      - 78.824
+      rgb_color:
+      - 255
+      - 148
+      - 54
+      xy_color:
+      - 0.5718
+      - 0.3847
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Couch Back 1
+      supported_features: 44
+      state: 'on'
+    light.couch_right_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 19.138
+      - 45.49
+      rgb_color:
+      - 255
+      - 176
+      - 139
+      xy_color:
+      - 0.4706
+      - 0.3567
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Couch Back 2
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 19.138
+      - 45.49
+      rgb_color:
+      - 255
+      - 176
+      - 139
+      xy_color:
+      - 0.4706
+      - 0.3567
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Couch Back 3
+      supported_features: 44
+      state: 'on'
+    light.couch_left_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 130
+      hs_color:
+      - 324.762
+      - 49.412
+      rgb_color:
+      - 255
+      - 129
+      - 203
+      xy_color:
+      - 0.4284
+      - 0.2454
+      effect: None
+      mode: normal
+      dynamics: dynamic_palette
+      friendly_name: Couch Back 4
+      supported_features: 44
+      state: 'on'
+  icon: mdi:office-building
+  metadata:
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+- id: '1692808817996'
+  name: Office Avatar
+  entities:
+    light.office_wall_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 45.588
+      - 80
+      rgb_color:
+      - 255
+      - 206
+      - 51
+      xy_color:
+      - 0.4964
+      - 0.4542
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 1
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 241.356
+      - 69.412
+      rgb_color:
+      - 82
+      - 78
+      - 255
+      xy_color:
+      - 0.1671
+      - 0.0853
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 2
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 251.309
+      - 74.902
+      rgb_color:
+      - 100
+      - 64
+      - 255
+      xy_color:
+      - 0.1824
+      - 0.0807
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 3
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 241.356
+      - 69.412
+      rgb_color:
+      - 82
+      - 78
+      - 255
+      xy_color:
+      - 0.1671
+      - 0.0853
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 4
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_left_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 45.588
+      - 80
+      rgb_color:
+      - 255
+      - 206
+      - 51
+      xy_color:
+      - 0.4964
+      - 0.4542
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Left
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_right_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 224.91
+      - 65.49
+      rgb_color:
+      - 88
+      - 130
+      - 255
+      xy_color:
+      - 0.1729
+      - 0.146
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Right
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 229.634
+      - 74.902
+      rgb_color:
+      - 64
+      - 97
+      - 255
+      xy_color:
+      - 0.1554
+      - 0.0996
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 1
+      supported_features: 44
+      state: 'on'
+    light.couch_right_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 229.634
+      - 74.902
+      rgb_color:
+      - 64
+      - 97
+      - 255
+      xy_color:
+      - 0.1554
+      - 0.0996
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 2
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 45.588
+      - 80
+      rgb_color:
+      - 255
+      - 206
+      - 51
+      xy_color:
+      - 0.4964
+      - 0.4542
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 3
+      supported_features: 44
+      state: 'on'
+    light.couch_left_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 241.356
+      - 69.412
+      rgb_color:
+      - 82
+      - 78
+      - 255
+      xy_color:
+      - 0.1671
+      - 0.0853
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 4
+      supported_features: 44
+      state: 'on'
+    light.office_decorations:
+      supported_color_modes:
+      - onoff
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.couch_neon_signs
+      - light.ghost_neon_sign
+      icon: mdi:flower
+      friendly_name: Office Decorations
+      supported_features: 0
+      color_mode: onoff
+      state: 'on'
+    light.hue_play_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 251.309
+      - 74.902
+      rgb_color:
+      - 100
+      - 64
+      - 255
+      xy_color:
+      - 0.1824
+      - 0.0807
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Left
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 224.91
+      - 65.49
+      rgb_color:
+      - 88
+      - 130
+      - 255
+      xy_color:
+      - 0.1729
+      - 0.146
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Right
+      supported_features: 44
+      state: 'on'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Slow lightning
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 56
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:triangle-outline
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      effect: Ocean
+      state: 'on'
+    light.office_star_projectors:
+      supported_color_modes:
+      - brightness
+      - hs
+      entity_id:
+      - light.office_star_projector
+      icon: mdi:weather-night
+      friendly_name: Office Star Projectors
+      supported_features: 0
+      state: 'off'
+  icon: mdi:waterfall
+  metadata:
+    light.office_decorations:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_star_projectors:
+      entity_only: true
+- id: '1692829494101'
+  name: Office Haunted Mansion
+  entities:
+    light.office_wall_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 68
+      color_temp_kelvin: 2336
+      color_temp: 428
+      hs_color:
+      - 29.343
+      - 78.812
+      rgb_color:
+      - 255
+      - 152
+      - 54
+      xy_color:
+      - 0.564
+      - 0.389
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 1
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 68
+      color_temp_kelvin: 2336
+      color_temp: 428
+      hs_color:
+      - 29.343
+      - 78.812
+      rgb_color:
+      - 255
+      - 152
+      - 54
+      xy_color:
+      - 0.564
+      - 0.389
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 2
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 68
+      color_temp_kelvin: 2336
+      color_temp: 428
+      hs_color:
+      - 29.343
+      - 78.812
+      rgb_color:
+      - 255
+      - 152
+      - 54
+      xy_color:
+      - 0.564
+      - 0.389
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 3
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 68
+      color_temp_kelvin: 2336
+      color_temp: 428
+      hs_color:
+      - 29.343
+      - 78.812
+      rgb_color:
+      - 255
+      - 152
+      - 54
+      xy_color:
+      - 0.564
+      - 0.389
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 4
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_right_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 31
+      color_temp_kelvin: 2525
+      color_temp: 396
+      hs_color:
+      - 28.809
+      - 71.624
+      rgb_color:
+      - 255
+      - 160
+      - 72
+      xy_color:
+      - 0.544
+      - 0.389
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Right
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_left_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 211.622
+      - 58.039
+      rgb_color:
+      - 107
+      - 177
+      - 255
+      xy_color:
+      - 0.1878
+      - 0.2208
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Left
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 207.419
+      - 72.941
+      rgb_color:
+      - 69
+      - 170
+      - 255
+      xy_color:
+      - 0.1615
+      - 0.2037
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 1
+      supported_features: 44
+      state: 'on'
+    light.couch_right_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 211.622
+      - 58.039
+      rgb_color:
+      - 107
+      - 177
+      - 255
+      xy_color:
+      - 0.1878
+      - 0.2208
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 2
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 228.691
+      - 74.902
+      rgb_color:
+      - 64
+      - 100
+      - 255
+      xy_color:
+      - 0.1555
+      - 0.103
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 3
+      supported_features: 44
+      state: 'on'
+    light.couch_left_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 228.691
+      - 74.902
+      rgb_color:
+      - 64
+      - 100
+      - 255
+      xy_color:
+      - 0.1555
+      - 0.103
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 4
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 14.14
+      - 61.569
+      rgb_color:
+      - 255
+      - 135
+      - 98
+      xy_color:
+      - 0.5544
+      - 0.3443
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Left
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 14.14
+      - 61.569
+      rgb_color:
+      - 255
+      - 135
+      - 98
+      xy_color:
+      - 0.5544
+      - 0.3443
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Right
+      supported_features: 44
+      state: 'on'
+    light.office_decorations:
+      effect_list:
+      - Cloud Channel
+      - Custom
+      - Faces
+      - Visualizer
+      supported_color_modes:
+      - brightness
+      - onoff
+      color_mode: brightness
+      brightness: 255
+      effect: Custom
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.couch_neon_signs
+      - light.ghost_neon_sign
+      - light.zelda_string_lights
+      - light.pixoo64
+      icon: mdi:flower
+      friendly_name: Office Decorations
+      supported_features: 4
+      state: 'on'
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Slow lightning
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:triangle-outline
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'off'
+  icon: mdi:grave-stone
+  metadata:
+    light.office_decorations:
+      entity_only: true
+    light.office_nanoleafs:
+      entity_only: true
+- id: '1695490464575'
+  name: Office Underwater
+  entities:
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: xy
+      brightness: 81
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 205.955
+      - 69.804
+      rgb_color:
+      - 77
+      - 178
+      - 255
+      xy_color:
+      - 0.1665
+      - 0.218
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'on'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: xy
+      brightness: 86
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 212.118
+      - 66.667
+      rgb_color:
+      - 85
+      - 164
+      - 255
+      xy_color:
+      - 0.1715
+      - 0.196625
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_lamp_2
+      - light.hue_play_1_2
+      - light.hue_play_1
+      - light.hue_play_1_4
+      - light.hue_play_1_3
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'on'
+    light.office_decorations:
+      effect_list:
+      - Cloud Channel
+      - Custom
+      - Faces
+      - Visualizer
+      supported_color_modes:
+      - brightness
+      - onoff
+      effect:
+      color_mode:
+      brightness:
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.ghost_neon_sign
+      - light.zelda_string_lights
+      - light.pixoo64
+      icon: mdi:flower
+      friendly_name: Office Decorations
+      supported_features: 4
+      state: 'off'
+    light.office_aperture_lines:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Atomic
+      - Beat Drop
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Hip Hop
+      - Jalapeno Heat
+      - Japanese Streets
+      - Kaleidoscope
+      - Mountain Air
+      - Mystic Night
+      - Nanoversary
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Slow lightning
+      - Starry Sky
+      - Tuscany Sunset
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      icon: mdi:triangle-outline
+      friendly_name: Office Aperture Lines
+      supported_features: 36
+      state: 'off'
+    light.office_vertical_lines:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      - Atomic
+      - Japanese Streets
+      - Nanoversary
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      icon: mdi:triangle-outline
+      friendly_name: Office Vertical Lines
+      supported_features: 36
+      state: 'off'
+    light.office_star_projector:
+      supported_color_modes:
+      - brightness
+      - hs
+      color_mode: hs
+      brightness: 255
+      hs_color:
+      - 219
+      - 50.2
+      rgb_color:
+      - 126
+      - 171
+      - 255
+      xy_color:
+      - 0.207
+      - 0.216
+      friendly_name: Office Star Projector
+      supported_features: 0
+      state: 'on'
+  icon: mdi:waves
+  metadata:
+    light.office_wall_lights:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+- id: '1695490492637'
+  name: New scene
+  entities:
+    light.office_wall_light_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 230
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 1
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_2_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 204
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 2
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_3_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 178
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 3
+      supported_features: 44
+      state: 'on'
+    light.office_wall_light_4_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 204
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Office Wall Light 4
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 230
+      hs_color:
+      - 218.382
+      - 53.333
+      rgb_color:
+      - 119
+      - 168
+      - 255
+      xy_color:
+      - 0.199
+      - 0.208
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 1
+      supported_features: 44
+      state: 'on'
+    light.couch_right_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 153
+      hs_color:
+      - 218.382
+      - 53.333
+      rgb_color:
+      - 119
+      - 168
+      - 255
+      xy_color:
+      - 0.199
+      - 0.208
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 2
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 153
+      hs_color:
+      - 218.382
+      - 53.333
+      rgb_color:
+      - 119
+      - 168
+      - 255
+      xy_color:
+      - 0.199
+      - 0.208
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 3
+      supported_features: 44
+      state: 'on'
+    light.couch_left_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 204
+      hs_color:
+      - 218.382
+      - 53.333
+      rgb_color:
+      - 119
+      - 168
+      - 255
+      xy_color:
+      - 0.199
+      - 0.208
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 4
+      supported_features: 44
+      state: 'on'
+  metadata: {}
+- id: '1695505301783'
+  name: Office Starwars Cantina
+  entities:
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Slow lightning
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:lightbulb-group
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      color_mode: color_temp
+      brightness: 135
+      hs_color:
+      - 27.232
+      - 16.839
+      rgb_color:
+      - 255
+      - 231
+      - 212
+      xy_color:
+      - 0.365
+      - 0.347
+      color_temp_kelvin: 5181
+      color_temp: 193
+      state: 'on'
+    light.office_decorations:
+      supported_color_modes:
+      - onoff
+      entity_id:
+      - light.starcraft_pylon
+      - light.usb_decor_hub_1
+      - light.usb_decor_hub_2
+      - light.couch_neon_signs
+      - light.ghost_neon_sign
+      icon: mdi:lightbulb-group
+      friendly_name: Office Decorations
+      supported_features: 0
+      color_mode: onoff
+      state: 'on'
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 168
+      hs_color:
+      - 27.028
+      - 18.905
+      rgb_color:
+      - 255
+      - 228
+      - 206
+      xy_color:
+      - 0.371
+      - 0.349
+      effect: None
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      color_temp_kelvin: 5025
+      color_temp: 199
+      state: 'on'
+    light.office_accent_lighting:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - unknown
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 176
+      hs_color:
+      - 17.838
+      - 72.549
+      rgb_color:
+      - 255
+      - 125
+      - 70
+      xy_color:
+      - 0.59
+      - 0.351
+      effect: None
+      entity_id:
+      - light.media_center_ambience_right_2
+      - light.media_center_ambience_left_2
+      - light.couch_right_ambience_2
+      - light.couch_left_ambience_2
+      - light.office_lamp_2
+      - light.hue_play_1_2
+      - light.hue_play_1
+      - light.hue_play_1_4
+      - light.hue_play_1_3
+      icon: mdi:lightbulb-group
+      friendly_name: Office Accent Lighting
+      supported_features: 44
+      state: 'on'
+  icon: mdi:glass-mug-variant
+  metadata:
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_decorations:
+      entity_only: true
+    light.office_wall_lights:
+      entity_only: true
+    light.office_accent_lighting:
+      entity_only: true
+- id: '1707034895813'
+  name: Neon
+  entities:
+    light.office_nanoleafs:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Atomic
+      - Beat Drop
+      - Christmas Lights
+      - Cotton Candy
+      - Cozy Blaze
+      - Fiesta
+      - Good Vibes
+      - Halloween
+      - Hip Hop
+      - Horror Night
+      - Jalapeno Heat
+      - Japanese Streets
+      - Kaleidoscope
+      - Lightning
+      - Mountain Air
+      - Mystic Night
+      - Nanoversary
+      - Neon Dreams
+      - Northern Lights
+      - Ocean
+      - Pop Rocks
+      - Prism
+      - Radioactive
+      - Raspberry Lemonade
+      - Sakura Blossom
+      - Slow lightning
+      - Starry Sky
+      - Sunset
+      - Try this before you skip it
+      - Tuscany Sunset
+      - Warzone
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 204
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: Neon Dreams
+      entity_id:
+      - light.office_vertical_lines
+      - light.office_printer_lines
+      - light.office_aperture_lines
+      icon: mdi:triangle-outline
+      friendly_name: Office Nanoleafs
+      supported_features: 36
+      state: 'on'
+    light.office_wall_lights:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      entity_id:
+      - light.office_wall_light_1_2
+      - light.office_wall_light_2_2
+      - light.office_wall_light_3_2
+      - light.office_wall_light_4_2
+      icon: mdi:wall-sconce-flat-variant
+      friendly_name: Office Wall Lights
+      supported_features: 44
+      state: 'off'
+    light.hue_play_1_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 138.118
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 77
+      xy_color:
+      - 0.169
+      - 0.685
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 1
+      supported_features: 44
+      state: 'on'
+    light.couch_right_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 2
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 269.496
+      - 93.333
+      rgb_color:
+      - 134
+      - 17
+      - 255
+      xy_color:
+      - 0.2213
+      - 0.0805
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 3
+      supported_features: 44
+      state: 'on'
+    light.couch_left_ambience_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 138.118
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 77
+      xy_color:
+      - 0.169
+      - 0.685
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Couch Back 4
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_left_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Left
+      supported_features: 44
+      state: 'on'
+    light.media_center_ambience_right_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 279.563
+      - 89.804
+      rgb_color:
+      - 177
+      - 26
+      - 255
+      xy_color:
+      - 0.2792
+      - 0.1086
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Media Center Ambience Right
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 139.676
+      - 96.863
+      rgb_color:
+      - 8
+      - 255
+      - 89
+      xy_color:
+      - 0.1691
+      - 0.664
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Left
+      supported_features: 44
+      state: 'on'
+    light.hue_play_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 249
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Train Shelf Right
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightning-bolt
+  metadata:
+    light.office_nanoleafs:
+      entity_only: true
+    light.office_wall_lights:
+      entity_only: true
+    light.hue_play_1_4:
+      entity_only: true
+    light.couch_right_ambience_2:
+      entity_only: true
+    light.hue_play_1_3:
+      entity_only: true
+    light.couch_left_ambience_2:
+      entity_only: true
+    light.media_center_ambience_left_2:
+      entity_only: true
+    light.media_center_ambience_right_2:
+      entity_only: true
+    light.hue_play_1_2:
+      entity_only: true
+    light.hue_play_1:
+      entity_only: true

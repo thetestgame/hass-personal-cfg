@@ -1,0 +1,74 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include sensors.yaml
+panel_iframe: !include panel_iframe.yaml
+rest_command: !include rest_commands.yaml
+cover: !include cover.yaml
+climate: !include climate.yaml
+notify: !include notify.yaml
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24
+  server_port: 8123
+
+conversation:
+
+light:
+  - platform: template
+    lights:
+      pixoo64:
+        friendly_name: "Pixoo"
+        level_template: "{{ ( state_attr('sensor.pixoo64_data', 'Brightness') * 2.55 ) | round(0) | int  }}"
+        value_template: "{{ state_attr('sensor.pixoo64_data', 'LightSwitch')|int == 1 }}"
+        effect_list_template: "{{['Faces', 'Cloud Channel', 'Visualizer', 'Custom']}}"
+        effect_template: "{{ states('sensor.pixoo64_current_channel') }}"
+        turn_on:
+          service: rest_command.pixoo64_switch_on
+        turn_off:
+          service: rest_command.pixoo64_switch_off
+        set_level:
+          service: rest_command.pixoo64_set_brightness
+          data:
+            brightness: "{{ ( brightness / 2.55 ) | round(0) | int }}"
+        icon_template: >-
+          mdi:space-invaders
+        set_effect:
+          - service: rest_command.pixoo64_set_channel
+            data:
+              effect: >-
+                {% if effect == 'Faces' %}
+                0
+                {% elif effect == 'Cloud Channel' %}
+                1
+                {% elif effect == 'Visualizer' %}
+                2
+                {% else %}
+                3
+                {% endif %}
+
+input_button:
+  pixoo64_set_custom_channel_1:
+    name: Pixoo64 Set Custom Channel 1
+    icon: mdi:lightning-bolt
+  pixoo64_set_custom_channel_2:
+    name: Pixoo64 Set Custom Channel 2
+    icon: mdi:lightning-bolt
+  pixoo64_set_custom_channel_3:
+    name: Pixoo64 Set Custom Channel 3
+    icon: mdi:lightning-bolt

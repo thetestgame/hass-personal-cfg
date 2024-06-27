@@ -1,0 +1,942 @@
+- id: '1674370450158'
+  alias: Office Top of the stairs dimmer control
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      off_short_action:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id:
+          - light.office_wall_lights
+          - light.office_accent_lighting
+          - light.office_decorations
+          - light.office_nanoleafs
+      off_long_action:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id:
+          - light.office_wall_lights
+          - light.office_accent_lighting
+          - light.office_decorations
+          - light.office_nanoleafs
+      on_short_action:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id:
+          - light.office_wall_lights
+          - light.office_accent_lighting
+          - light.office_decorations
+          - light.office_nanoleafs
+      on_long_action:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id:
+          - light.office_wall_lights
+          - light.office_accent_lighting
+          - light.office_decorations
+          - light.office_nanoleafs
+      dimmer_device: 4e5923421cd44dcce51e87677c5aa391
+- id: '1674370478730'
+  alias: Office bottom of the stairs control
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      off_short_action:
+      - service: homeassistant.turn_off
+        data: {}
+        target:
+          area_id: office
+      off_long_action:
+      - service: homeassistant.turn_off
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      on_short_action:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.office_work
+        metadata: {}
+      on_long_action:
+      - service: homeassistant.turn_on
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      dimmer_device: 3021e28b76dde81fe180a11d2e3308ae
+      brightness_up_long_action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_wall_lights
+          transition: '1'
+          brightness: "{% set n = states.light.office_wall_lights.attributes.brightness
+            + 25 %} {% if n > 255 %}\n  255\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_accent_lighting
+          transition: '1'
+          brightness: "{% set n = states.light.office_accent_lighting.attributes.brightness
+            + 25 %} {% if n > 255 %}\n  255\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_nanoleafs
+          transition: '1'
+          brightness: "{% set n = states.light.office_nanoleafs.attributes.brightness
+            + 25 %} {% if n > 255 %}\n  255\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      brightness_down_long_action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_wall_lights
+          transition: '1'
+          brightness: "{% set n = states.light.office_accent_lighting.attributes.brightness
+            - 25 %} {% if n < 1 %}\n  1\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_accent_lighting
+          transition: '1'
+          brightness: "{% set n = states.light.office_accent_lighting.attributes.brightness
+            - 25 %} {% if n < 1 %}\n  1\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_nanoleafs
+          transition: '1'
+          brightness: "{% set n = states.light.office_nanoleafs.attributes.brightness
+            - 25 %} {% if n < 1 %}\n  1\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      brightness_up_short_action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_wall_lights
+          transition: '1'
+          brightness: "{% set n = states.light.office_wall_lights.attributes.brightness
+            + 25 %} {% if n > 255 %}\n  255\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_accent_lighting
+          transition: '1'
+          brightness: "{% set n = states.light.office_accent_lighting.attributes.brightness
+            + 25 %} {% if n > 255 %}\n  255\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_nanoleafs
+          transition: '1'
+          brightness: "{% set n = states.light.office_nanoleafs.attributes.brightness
+            + 25 %} {% if n > 255 %}\n  255\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      brightness_down_short_action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_wall_lights
+          transition: '1'
+          brightness: "{% set n = states.light.office_accent_lighting.attributes.brightness
+            - 25 %} {% if n < 1 %}\n  1\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_accent_lighting
+          transition: '1'
+          brightness: "{% set n = states.light.office_accent_lighting.attributes.brightness
+            - 25 %} {% if n < 1 %}\n  1\n{% else %}\n  {{ n }}\n{% endif %}\n"
+      - service: light.turn_on
+        data_template:
+          entity_id: light.office_nanoleafs
+          transition: '1'
+          brightness: "{% set n = states.light.office_nanoleafs.attributes.brightness
+            - 25 %} {% if n < 1 %}\n  1\n{% else %}\n  {{ n }}\n{% endif %}\n"
+- id: '1675634612774'
+  alias: Jordan's Room Dimmer Switch
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      dimmer_device: f33484c9b844825288ad5d273e7a2492
+      on_short_action:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.jordan_s_room_bright
+        metadata: {}
+      off_short_action:
+      - service: homeassistant.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: jordans_room
+      off_long_action:
+      - service: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.jordan_s_room_overhead_lights
+      on_long_action: []
+      brightness_down_short_action:
+      - service: homeassistant.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: office
+      brightness_down_long_action:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.jordan_s_room_nightlight
+        metadata: {}
+      - service: homeassistant.turn_off
+        data: {}
+        target:
+          area_id: office
+          entity_id: light.office_bathroom_lights
+      - service: homeassistant.turn_off
+        data: {}
+        target:
+          area_id: kitchen
+      brightness_up_short_action:
+      - service: scene.turn_on
+        metadata: {}
+        target:
+          entity_id: scene.office_work
+      brightness_up_long_action: []
+- id: '1675639771299'
+  alias: Main Bedroom Remote
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      dimmer_device: 5f527a63f1811ba1670a1beed8b2439c
+      on_short_action:
+      - service: homeassistant.toggle
+        data: {}
+        target:
+          entity_id: switch.main_bedroom_lamps
+      on_long_action: []
+      off_short_action: []
+      off_long_action: []
+- id: '1675640596784'
+  alias: Turn off Jordan's stuff when he leaves the house.
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: device_tracker.jordan_maxwell
+    zone: zone.home
+    event: leave
+  condition: []
+  action:
+  - service: homeassistant.turn_off
+    data: {}
+    target:
+      area_id:
+      - office
+      - jordans_room
+  mode: single
+- id: '1675987916880'
+  alias: Front Door Inside Light Dimmer Switch
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      dimmer_device: 3811ff662a47fd042a3b2c65cb5e01f9
+      on_short_action:
+      - type: turn_on
+        device_id: 8d4855a00ffac9421ba2c74a32300cd9
+        entity_id: light.hue_white_lamp_1
+        domain: light
+      on_long_action:
+      - type: turn_on
+        device_id: 8d4855a00ffac9421ba2c74a32300cd9
+        entity_id: light.hue_white_lamp_1
+        domain: light
+      off_short_action:
+      - type: turn_off
+        device_id: 8d4855a00ffac9421ba2c74a32300cd9
+        entity_id: light.hue_white_lamp_1
+        domain: light
+      off_long_action:
+      - type: turn_off
+        device_id: 8d4855a00ffac9421ba2c74a32300cd9
+        entity_id: light.hue_white_lamp_1
+        domain: light
+- id: '1676005571717'
+  alias: Sync Main Bedroom Switch with Accent Lighting
+  description: ''
+  trigger:
+  - platform: device
+    type: changed_states
+    device_id: 2d6b206fbf320dc156fdcfc24dddd8af
+    entity_id: switch.main_bedroom_lamps
+    domain: switch
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: 2d6b206fbf320dc156fdcfc24dddd8af
+        entity_id: switch.main_bedroom_lamps
+        domain: switch
+      sequence:
+      - service: homeassistant.turn_off
+        data: {}
+        target:
+          entity_id: light.main_bedroom_accent_lighting
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 2d6b206fbf320dc156fdcfc24dddd8af
+        entity_id: switch.main_bedroom_lamps
+        domain: switch
+      sequence:
+      - service: homeassistant.turn_on
+        data: {}
+        target:
+          entity_id: light.main_bedroom_accent_lighting
+  mode: single
+- id: '1676089846649'
+  alias: Sync Livestreams with Office LiveStream sign and Do Not Disturb
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.strangeloopgames
+  - platform: state
+    entity_id:
+    - sensor.thetestgame
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: sensor.strangeloopgames
+          state: online
+        - condition: state
+          entity_id: sensor.thetestgame
+          state: online
+      sequence:
+      - service: input_boolean.turn_on
+        data: {}
+        target:
+          entity_id: input_boolean.office_do_not_disturb
+    - conditions:
+      - condition: and
+        conditions:
+        - condition: state
+          entity_id: sensor.strangeloopgames
+          state: offline
+        - condition: state
+          entity_id: sensor.thetestgame
+          state: offline
+      sequence:
+      - service: input_boolean.turn_off
+        data: {}
+        target:
+          entity_id: input_boolean.office_do_not_disturb
+  mode: single
+- id: '1676094306433'
+  alias: Automatically open Blinds at Sunrise
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: '2:00:00'
+  condition: []
+  action:
+  - service: cover.open_cover
+    data: {}
+    target:
+      entity_id:
+      - cover.living_room_blinds
+      - cover.kitchen_blinds
+      - cover.jordan_s_bedroom_blinds
+  mode: single
+- id: '1676094353111'
+  alias: Automatically close the blinds at Sunset
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:30:00
+  condition: []
+  action:
+  - service: cover.close_cover
+    data: {}
+    target:
+      entity_id:
+      - cover.living_room_blinds
+      - cover.kitchen_blinds
+      - cover.jordan_s_bedroom_blinds
+  - service: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.living_room_lamps_2
+  mode: single
+- id: '1676176390687'
+  alias: Sync Global Office Do Not Disturb with the Alexa
+  description: ''
+  use_blueprint:
+    path: adchevrier/synchronize-the-on-off-state-of-2-entities.yaml
+    input:
+      entity_1: input_boolean.office_do_not_disturb
+      entity_2: switch.office_alexa_do_not_disturb_switch
+- id: '1676231980023'
+  alias: Upstairs Remote Button Actions
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      brightness_up_short_action:
+      - service: cover.open_cover
+        data: {}
+        target:
+          entity_id:
+          - cover.living_room_blinds
+          - cover.kitchen_blinds
+      brightness_up_long_action:
+      - service: cover.open_cover
+        data: {}
+        target:
+          entity_id:
+          - cover.living_room_blinds
+          - cover.kitchen_blinds
+      brightness_down_short_action:
+      - service: cover.close_cover
+        data: {}
+        target:
+          entity_id:
+          - cover.living_room_blinds
+          - cover.kitchen_blinds
+      brightness_down_long_action:
+      - service: cover.close_cover
+        data: {}
+        target:
+          entity_id:
+          - cover.living_room_blinds
+          - cover.kitchen_blinds
+      dimmer_device: bff8f609dc443a1aadc7da93018f2fb5
+- id: '1676237034793'
+  alias: Living Room Front Door Dimmer Controls
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      dimmer_device: d1437638b9280c56b4afeada621a84f8
+      on_short_action:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      on_long_action:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      off_long_action:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      off_short_action:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      brightness_up_short_action:
+      - service: cover.open_cover
+        data: {}
+        target:
+          entity_id: cover.living_room_blinds
+      brightness_down_short_action:
+      - service: cover.close_cover
+        data: {}
+        target:
+          entity_id: cover.living_room_blinds
+- id: '1676242318721'
+  alias: Living Room Kitchen Dimmer Controls
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      dimmer_device: 1a7f19ed77056865bef5bdf03de4f878
+      on_short_action:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      on_long_action:
+      - service: light.turn_on
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      off_long_action:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      off_short_action:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: light.living_room_lamps
+      brightness_up_short_action:
+      - service: cover.open_cover
+        data: {}
+        target:
+          entity_id: cover.living_room_blinds
+      brightness_down_short_action:
+      - service: cover.close_cover
+        data: {}
+        target:
+          entity_id: cover.living_room_blinds
+- id: '1676341584001'
+  alias: Automatically turn off the Office Bathroom Fan after 20 minutes
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: d4a1f4ff659f4000b1976910f4f2bb9f
+    entity_id: switch.office_bathroom_fan
+    domain: switch
+  condition: []
+  action:
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: d4a1f4ff659f4000b1976910f4f2bb9f
+    entity_id: switch.office_bathroom_fan
+    domain: switch
+  mode: single
+- id: '1687211107432'
+  alias: Automate Air Purifiers with Air Quality
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.air_quality_waqi_grb
+    from:
+    to:
+  condition: []
+  action:
+  - if:
+    - condition: state
+      entity_id: sensor.air_quality_waqi_grb
+      state: Good
+    then:
+    - service: homeassistant.turn_off
+      data: {}
+      target:
+        entity_id: switch.air_purifiers
+    else:
+    - service: homeassistant.turn_on
+      data: {}
+      target:
+        entity_id: switch.air_purifiers
+  mode: single
+- id: '1687223536396'
+  alias: Turn on Garage Lights when the door opens after sunset
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: de7c7f9a23f9c84f197d79fb41a8e7d7
+    entity_id: binary_sensor.garage_door_contact
+    domain: binary_sensor
+  condition: []
+  action:
+  - if:
+    - condition: device
+      type: is_off
+      device_id: c8a2dead839d3bd81d484378f3e49519
+      entity_id: switch.garage_lights
+      domain: switch
+    then:
+    - service: homeassistant.turn_on
+      data: {}
+      target:
+        entity_id: switch.garage_lights
+    - delay:
+        hours: 0
+        minutes: 15
+        seconds: 0
+        milliseconds: 0
+    - service: homeassistant.turn_off
+      data: {}
+      target:
+        entity_id: switch.garage_lights
+  mode: single
+- id: '1687232712812'
+  alias: Guest Bedroom Remote
+  description: ''
+  use_blueprint:
+    path: codycodes/hue-remote-dimmer-december-2021.yaml
+    input:
+      on_short_action:
+      - service: homeassistant.toggle
+        data: {}
+        target:
+          device_id: 191dbd899650b00fa5cf2b240a31589b
+      on_long_action: []
+      off_short_action: []
+      off_long_action: []
+      dimmer_device: ca10bad27666176c50d96cea06a39b22
+      brightness_up_short_action:
+      - service: homeassistant.toggle
+        data: {}
+        target:
+          entity_id: light.hailey_accent_lights
+- id: '1689966412311'
+  alias: Sync Office OIl Diffuser to Switch
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.office_oil_diffuser
+  condition: []
+  action:
+  - if:
+    - condition: state
+      entity_id: input_boolean.office_oil_diffuser
+      state: 'on'
+    then:
+    - service: select.select_option
+      data:
+        option: 'on'
+      target:
+        entity_id: select.smart_humidifier_2207148525207564110148e1e99a6b4f_spray
+    else:
+    - service: select.select_option
+      data:
+        option: 'off'
+      target:
+        entity_id: select.smart_humidifier_2207148525207564110148e1e99a6b4f_spray
+  mode: single
+- id: '1690488366538'
+  alias: Sync Living Room Oil Diffuser To Switch
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.living_room_oil_diffuser
+  condition: []
+  action:
+  - if:
+    - condition: state
+      entity_id: input_boolean.living_room_oil_diffuser
+      state: 'on'
+    then:
+    - service: select.select_option
+      data:
+        option: 'on'
+      target:
+        entity_id: select.smart_humidifier_2208183577488464110148e1e9a4997e_spray
+    else:
+    - service: select.select_option
+      data:
+        option: 'off'
+      target:
+        entity_id:
+        - select.smart_humidifier_2208183577488464110148e1e9a4997e_spray
+  mode: single
+- id: '1691207521665'
+  alias: Prompt Jordan with Shopping List
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: device_tracker.jordan_maxwell
+    zone: zone.aldi
+    event: enter
+  - platform: zone
+    entity_id: device_tracker.jordan_maxwell
+    zone: zone.costco
+    event: enter
+  - platform: zone
+    entity_id: device_tracker.jordan_maxwell
+    zone: zone.festival_foods
+    event: enter
+  - platform: zone
+    entity_id: device_tracker.jordan_maxwell
+    zone: zone.hy_vee
+    event: enter
+  - platform: zone
+    entity_id: device_tracker.jordan_maxwell
+    zone: zone.walmart
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_jordan_s_phone
+    data:
+      message: Open your shopping list?
+      data:
+        clickAction: /shopping-list
+        url: /shopping-list
+  mode: single
+- id: '1693175303468'
+  alias: Office Rainbow Effect
+  description: Rotating color every second on the Office wall lights
+  trigger:
+  - hours: '*'
+    minutes: '*'
+    platform: time_pattern
+    seconds: /1
+  condition:
+  - condition: state
+    entity_id: input_boolean.office_rainbow_wall_lights
+    state: 'on'
+  action:
+  - service: script.rainbow_light
+    data:
+      entity: light.office_wall_lights
+  mode: single
+- id: '1693175928900'
+  alias: Office Lightning Effects
+  description: Lightning effect every minute on the Office nanoleafs
+  trigger:
+  - hours: '*'
+    minutes: '*'
+    platform: time_pattern
+    seconds: /20
+  condition: []
+  action:
+  - service: script.lightning_light_effect
+    data:
+      entity: light.office_nanoleafs
+  mode: single
+- id: '1695416343166'
+  alias: Office Underwater Lights
+  description: ''
+  trigger:
+  - hours: '*'
+    minutes: '*'
+    platform: time_pattern
+    seconds: /1
+  condition:
+  - condition: state
+    entity_id: input_text.office_current_scene
+    state: scene.office_underwater
+  action:
+  - service: script.1695416305073
+    data:
+      entity: light.office_wall_light_1_2
+  - service: script.1695416305073
+    data:
+      entity: light.office_wall_light_2_2
+  - service: script.1695416305073
+    data:
+      entity: light.office_wall_light_3_2
+  - service: script.1695416305073
+    data:
+      entity: light.office_wall_light_4_2
+  - service: script.1695416305073
+    data:
+      entity: light.hue_play_1_4
+  - service: script.1695416305073
+    data:
+      entity: light.couch_right_ambience_2
+  - service: script.1695416305073
+    data:
+      entity: light.hue_play_1_3
+  - service: script.1695416305073
+    data:
+      entity: light.couch_left_ambience_2
+  mode: single
+- id: '1695492847194'
+  alias: Office Record Current Scene
+  description: ''
+  trigger:
+  - platform: event
+    event_type: call_service
+    event_data:
+      domain: scene
+      service: turn_on
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(trigger.event.data.service_data.entity_id, ''area'')
+      == ''Office'' }}'
+    enabled: false
+  action:
+  - service: input_text.set_value
+    data:
+      value: '{{ trigger.event.data.service_data.entity_id }}'
+    target:
+      entity_id: input_text.office_current_scene
+  mode: single
+- id: '1696020352707'
+  alias: Tag Office Dire Dire Docks Scene is scanned
+  description: Activates the Dire Dire Docks Ambience scene in the office when the
+    tag is scanned
+  trigger:
+  - platform: tag
+    tag_id: 8440ff55-6d6c-493e-baa8-c9566ff3844c
+  condition: []
+  action:
+  - service: scene.turn_on
+    data: {}
+    target:
+      entity_id: scene.office_underwater
+  mode: single
+- id: '1696020701703'
+  alias: Tag Office Avatar Scene is scanned
+  description: Activates the Avatar Ambience scene in the office when the tag is scanned
+  trigger:
+  - platform: tag
+    tag_id: 741fb7ef-a671-4ae8-901c-bae0001a126a
+  condition: []
+  action:
+  - service: mass.play_media
+    target:
+      device_id: 99c1265b454cd41083eec0d69bf15cbf
+    data:
+      media_id: Avatar Ambience
+  - service: scene.turn_on
+    target:
+      entity_id: scene.office_avatar
+    metadata: {}
+  - service: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.office_speakers
+  mode: single
+- id: '1696027919844'
+  alias: Tag Office Haunted Mansion Scene is scanned
+  description: Activates the Haunted Mansion Ambience scene in the office when the
+    tag is scanned
+  trigger:
+  - platform: tag
+    tag_id: ec0fc78f-f63e-46bc-85e1-715def127e7b
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.office_haunted_mansion_2
+    metadata: {}
+  - service: light.turn_on
+    data:
+      effect: candle
+    target:
+      entity_id: light.office_wall_lights
+  - service: mass.play_media
+    metadata: {}
+    data:
+      media_id: Haunted Mansion Ambience
+    target:
+      entity_id: media_player.office_speakers_2
+  - service: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.office_speakers_2
+  mode: single
+- id: '1696028153443'
+  alias: Tag Office Pirates of the Caribbean Scene is scanned
+  description: Activates the Pirates of the Caribbean scene in the office when the
+    tag is scanned
+  trigger:
+  - platform: tag
+    tag_id: 82f6ca49-78c4-4afe-9aa9-ffe5797a10f8
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.pirates_queue
+    metadata: {}
+    enabled: true
+  - service: mass.play_media
+    metadata: {}
+    data:
+      media_id: Pirates of the Caribbean Ride Ambience
+    target:
+      entity_id: media_player.office_speakers
+  - service: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.office_speakers
+  - service: light.turn_on
+    data:
+      effect: fire
+    target:
+      entity_id:
+      - light.office_accent_lighting
+      - light.office_wall_lights
+    enabled: true
+  mode: single
+- id: '1696028208433'
+  alias: Tag Office Hollywood Tower Hotel Scene is scanned
+  description: Activates the Hollywood Tower Hotel scene in the office when the tag
+    is scanned
+  trigger:
+  - platform: tag
+    tag_id: d3a032e1-a18f-4732-bbbf-9016bef6daa7
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.hollywood_tower_hotel
+    metadata: {}
+  - service: mass.play_media
+    metadata: {}
+    data:
+      media_id: Hollywood Tower Of Terror Music
+    target:
+      entity_id: media_player.office_speakers_2
+  - service: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.office_speakers_2
+  mode: single
+- id: '1705462576963'
+  alias: Turn on Office Pixoo with Office Decorations
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - light.office_decorations
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: rest_command.pixoo64_switch_on
+    data: {}
+  mode: single
+- id: '1707081575459'
+  alias: Tag Office Disney Springs Scene is scanned
+  description: Activates the Disney Springs Ambience scene in the office when the
+    tag is scanned
+  trigger:
+  - platform: tag
+    tag_id: 0ca23140-f00c-4969-aacd-cb51b08efe58
+  condition: []
+  action:
+  - service: mass.play_media
+    target:
+      device_id: 99c1265b454cd41083eec0d69bf15cbf
+    data:
+      media_id: Disney Springs Marketplace
+  - service: scene.turn_on
+    target:
+      entity_id: scene.disney_springs
+    metadata: {}
+  - service: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.office_speakers_2
+  mode: single
+- id: '1718849363617'
+  alias: 'Turn off Office dehumidifier '
+  description: ''
+  trigger:
+  - platform: time
+    at: 09:30:00
+  condition: []
+  action: []
+  mode: single

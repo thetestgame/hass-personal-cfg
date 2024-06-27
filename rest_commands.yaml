@@ -1,0 +1,86 @@
+open_living_main_window_blinds:
+  url: !secret living_room_main_window_blinds
+  method: put
+  headers:
+    accept: "application/json"
+  content_type: "application/json"
+  payload: '{ "Position": 0 }'
+  verify_ssl: false
+
+close_living_main_window_blinds:
+  url: !secret living_room_main_window_blinds
+  method: put
+  headers:
+    accept: "application/json"
+  content_type: "application/json"
+  payload: '{ "Position": -100 }'
+  verify_ssl: false
+
+set_living_main_window_blinds:
+  url: !secret living_room_main_window_blinds
+  method: put
+  headers:
+    accept: "application/json"
+  content_type: "application/json"
+  payload: '{ "Position": {{position}} }'
+  verify_ssl: false
+
+  # PIXMMO 64
+  # http://doc.divoom-gz.com/web/#/12?page_id=196
+pixoo64_set_brightness:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Channel/SetBrightness", "Brightness":{{ brightness }}}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_switch_off:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Channel/OnOffScreen", "OnOff":0}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_switch_on:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Channel/OnOffScreen", "OnOff":1}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_set_channel:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Channel/SetIndex", "SelectIndex":{{ effect }}}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_set_custom_channel:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Channel/SetCustomPageIndex", "SelectIndex": {{ custompageindex }}}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_set_text:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Draw/SendHttpText", "TextId":{{ id }}, "x":{{ x }}, "y":{{ y }}, "dir":{{ Direction }}, "font":{{ Font }}, "TextWidth":{{ TextWidth }}, "speed":{{ Speed }}, "TextString":"{{ Text }}", "color":"{{ Color }}", "align":{{ Align }}}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_reset_gif:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Draw/ResetHttpGifId"}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_send_gif:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Draw/SendHttpGif", "PicNum":1, "PicWidth":64, "PicOffset":0, "PicID":0, "PicSpeed":100, "PicData":"{{ gif }}"}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_play_buzzer:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Device/PlayBuzzer", "ActiveTimeInCycle":500, "OffTimeInCycle":500, "PlayTotalTime":500}'
+  content_type: "application/json; charset=utf-8"
+pixoo64_rotate_screen:
+  url: !secret pixoo_post_address
+  method: POST
+  payload: '{"Command":"Device/SetScreenRotationAngle", "Mode":{{ mode }}}'
+  content_type: "application/json; charset=utf-8"
+pixoo_rest_imageurl:
+  url: "http://homeassistant.local:5000/imageurl"
+  payload: "imageurl={{ Imageurl | urlencode }}&x={{ x }}&y={{ y }}&push_immediately=true"
+  content_type: "application/x-www-form-urlencoded"
+  method: POST
+  headers:
+    accept: "application/json"

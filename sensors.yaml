@@ -1,0 +1,97 @@
+- platform: command_line
+  name: shoppinglist
+  command: >
+    echo "{\"list\":" $( cat .shopping_list.json) "}"
+  value_template: >
+    {{ value_json.list | length }}
+  json_attributes:
+    - list
+
+- platform: template
+  sensors:
+    current_weekday:
+      value_template: "{{ ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][now().weekday()] }}"
+    current_month:
+      value_template: "{% set months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] %} {{ now().day | string + ' ' + months[now().month-1]}}"
+
+- platform: template
+  sensors:
+    air_quality_waqi_grb:
+      friendly_name: Green Bay Air Quality
+      value_template: >-
+        {%if states.sensor.grb_air_quality_index.state | float<=50 %}Good
+        {% elif states.sensor.grb_air_quality_index.state | float>50 | float<=100 %}Moderate
+        {% elif states.sensor.grb_air_quality_index.state | float>100 | float<=150 %}Unhealthy for Sensitive Groups
+        {% elif states.sensor.grb_air_quality_index.state | float>150 | float<=200 %}Unhealthy
+        {% elif states.sensor.grb_air_quality_index.state | float>200 | float<=250 %}Very unhealthy
+        {% elif states.sensor.grb_air_quality_index.state | float>250 | float<=300 %}Hazardous
+        {%- endif %}
+    recycling_day:
+      friendly_name: Recycling Day
+      value_template: >-
+        {{
+          (now().weekday() == 0) and
+          ((as_timestamp(now())|timestamp_custom('%U')|int) % 2 == 0)
+        }}
+    garbage_day:
+      friendly_name: Garbage Day
+      value_template: "{{ now().weekday() == 0 }}"
+#- platform: rest
+#  scan_interval: 600
+#  resource: !secret sensa_blind_devices
+#  name: "Living Room Center Window"
+#  headers:
+#    accept: "application/json"
+#  json_attributes_path: "$.[0]."
+#  verify_ssl: false
+#  json_attributes:
+#    - "idDevice"
+#    - "position"
+#    - "name"
+#    - "apiUrl"
+#    - "batteryPercentage"
+#  value_template: "{{ states.sensor.living_main_window_blinds_state.attributes.position }}"
+
+# PIXMOO 64
+- platform: rest
+  name: pixoo64 Data
+  resource: !secret pixoo_post_address
+  method: POST
+  payload: '{ "Command" : "Channel/GetAllConf" }'
+  value_template: "OK"
+  scan_interval: 30
+  json_attributes:
+    - Brightness
+    - RotationFlag
+    - ClockTime
+    - GalleryTime
+    - SingleGalleyTime
+    - PowerOnChannelId
+    - GalleryShowTimeFlag
+    - CurClockId
+    - Time24Flag
+    - TemperatureMode
+    - GyrateAngle
+    - MirrorFlag
+    - LightSwitch
+- platform: rest
+  name: pixoo64 Current Channel Integer
+  resource: !secret pixoo_post_address
+  method: POST
+  payload: '{ "Command" : "Channel/GetIndex" }'
+  value_template: "{{ value_json.SelectIndex }}" # channel id 0~3 ；0:Faces;1:Cloud Channdle;2:Visualizer;3:Custom
+  scan_interval: 30
+- platform: template
+  sensors:
+    pixoo64_current_channel:
+      friendly_name: "pixoo64 Current Channel"
+      value_template: >-
+        {% if (states.sensor.pixoo64_current_channel_integer.state|int == 0) %}
+          Faces
+        {% elif (states.sensor.pixoo64_current_channel_integer.state|int == 1) %}
+          Cloud Channel
+        {% elif (states.sensor.pixoo64_current_channel_integer.state|int == 2) %}
+          Visualizer
+        {% else %}
+          Custom
+        {% endif %}
