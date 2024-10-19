@@ -1,0 +1,20 @@
+# This YAML configuration file defines a group of operating modes for a system.
+# The group is named "Operating Modes" and is represented by a cog icon.
+# It includes the following entities:
+# - input_boolean.guest_mode: Represents a guest mode.
+# - input_boolean.work_mode: Represents a work mode.
+# - input_boolean.dont_disturb_mode: Represents a do not disturb mode.
+# - input_boolean.alert_mode: Represents an alert mode.
+# - input_boolean.speech_notifications: Represents speech notifications.
+# - input_boolean.text_notifications: Represents text notifications.
+
+operating_modes:
+  name: Operating Modes
+  icon: mdi:cog
+  entities:
+    - input_boolean.guest_mode
+    - input_boolean.work_mode
+    - input_boolean.dont_disturb_mode
+    - input_boolean.alert_mode
+    - input_boolean.speech_notifications
+    - input_boolean.text_notifications

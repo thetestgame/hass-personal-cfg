@@ -1,13 +1,7 @@
 blueprint:
   name: Hue Dimmer Remote
-  description: '(Dec 2021 Update) Using a Hue bridge with which a dimmer remote is
-    paired,  allows you to configure actions based on said Hue Dimmer Remote
-
-    NOTE: tested with RWL020 and RWL022, but community says it also works with RWL021!
-
-    '
+  description: '(Dec 2021 Update) Using a Hue bridge with which a dimmer remote is paired,  allows you to configure actions based on said Hue Dimmer Remote'
   domain: automation
-  source_url: https://raw.githubusercontent.com/thetestgame/hass-personal-cfg/refs/heads/main/blueprints/automation/codycodes/hue-remote-dimmer-december-2021.yaml?token=GHSAT0AAAAAACXEGW2BAL2R33HDF5KERFQYZYPE5OA
   input:
     dimmer_device:
       name: Dimmer Remote Device

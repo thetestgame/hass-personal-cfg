@@ -1,0 +1,27 @@
+# This configuration file defines notification groups for mobile devices.
+# 
+# The 'family_phones' group includes all mobile devices used by the family.
+# The 'jordan_devices' group includes all mobile devices used by Jordan.
+#
+# Each group lists the services corresponding to the mobile apps installed on the devices.
+
+############################################################################################################################################################################
+
+# Defines a notify group containing all of the family's mobile devices.
+#family_phones:
+#  platform: group
+#  services:
+#    # Jordan's Phones
+#    - service: mobile_app_jordan_s_s8
+#    - service: mobile_app_pixel_8_pro
+
+############################################################################################################################################################################
+
+# Defines a notify group containing all of Jordan's mobile devices.
+#jordan_devices:
+#  platform: group
+#  services: 
+#    - service: mobile_app_jordan_s_s8 
+#    - service: mobile_app_pixel_8_pro
+  
+############################################################################################################################################################################

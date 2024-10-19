@@ -1,4 +1,16 @@
-id: '1729043102996'
+# This YAML configuration file defines an automation for a dimmer switch located in the downstairs bedroom.
+# 
+# The automation uses a blueprint located at 'thetestgame/hue-remote-dimmer-december-2021.yaml' and maps specific actions to the dimmer switch buttons.
+# 
+# The following actions are configured:
+# 
+# - The primary on/off buttons are mapped to control the lights in the office:
+#   - Short press on the "on" button turns on the lights in the office.
+#   - Short press on the "off" button turns off the lights in the office.
+# 
+# The dimmer switch device is identified by the ID '77ebff5dac81e298307da36ed3b1de24'.
+
+id: 'downstairs_office_dimmer_switch'
 alias: Downstairs Office Dimmer Switch
 description: ''
 use_blueprint:
