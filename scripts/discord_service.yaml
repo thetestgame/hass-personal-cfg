@@ -1,0 +1,59 @@
+# Discord Notification Script
+#
+# This script sends notifications to a specified Discord channel using the Home Assistant notify service.
+# The target channel and user are determined based on the provided variables.
+#
+# Variables:
+# - who: The user to send the notification from. Possible values are 'home_assistant', 'alice', or any other user.
+# - message: The message content to be sent.
+# - channel: The target Discord channel. Possible values include 'test-titor', 'nt-infrastructure', 'nt-streaming', 
+#            'nt-github', 'nt-games', 'nt-tasks', 'general', 'dev-smart-home', 'dev-discord-bot', 'dev-notes', 
+#            or any other channel.
+# - title: The title of the embedded message.
+# - description: The description of the embedded message.
+# - url: The URL to be included in the embedded message.
+#
+# The script uses conditional logic to determine the appropriate notify service and target channel ID based on the input variables.
+
+discord_notify_service:
+  name: "Discord Notify Service"
+  sequence:
+    - service: >
+        {% if who == 'home_assistant' %}
+          notify.home_assistant
+        {% elif who == 'alice' %}
+          notify.alice
+        {% else %}
+          notify.home_assistant
+        {% endif %}
+      data:
+        message: "{{ message }}"
+        target: >
+          {% if channel == 'test-titor' %}
+            401996093786685442
+          {% elif channel == 'nt-infrastructure' %}
+            1257852697806372874
+          {% elif channel == 'nt-streaming' %}
+            1297006644294717450
+          {% elif channel == 'nt-github' %}
+            1295767985360736256
+          {% elif channel == 'nt-games' %}
+            1295768803493412985
+          {% elif channel == 'nt-tasks' %}
+            1297266156230545461
+          {% elif channel == 'general' %}
+            1257852904312672326
+          {% elif channel == 'dev-smart-home' %}
+            1295769567158866043
+          {% elif channel == 'dev-discord-bot' %}
+            1295769593805279242
+          {% elif channel == 'dev-notes' %}
+            1265472645617422487
+          {% else %}
+            1257852904312672326
+          {% endif %}
+        data:
+          embed:
+            title: "{{ title }}"
+            description: "{{ description }}"
+            url: "{{ url }}"

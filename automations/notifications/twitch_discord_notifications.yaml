@@ -41,18 +41,16 @@ triggers:
       - sensor.chilledchaos
       - sensor.linustech
       - sensor.ray
-      - sensor.kutiekatt  
+      - sensor.kutiekatt
       - sensor.tlt0r
 conditions:
   - condition: template
     value_template: "{{ state_attr(trigger.entity_id, 'started_at') is not none }}"
 actions:
-  - service: notify.home_assistant
+  - service: script.discord_notify_service
     data:
-      message: "{{ state_attr(trigger.entity_id, 'friendly_name') }} just went live on Twitch"
-      target: !secret discord_channel_streaming_notifications
-      data:
-        embed:
-          title: "{{ state_attr(trigger.entity_id, 'friendly_name') }} just went live on Twitch"
-          description: "Watch {{ state_attr(trigger.entity_id, 'friendly_name') }}'s stream now!"
-          url: "https://www.twitch.tv/{{ state_attr(trigger.entity_id, 'friendly_name') | lower }}"
+      who: home_assistant
+      channel: nt-streaming
+      title: "{{ state_attr(trigger.entity_id, 'friendly_name') }} just went live on Twitch"
+      description: "Watch {{ state_attr(trigger.entity_id, 'friendly_name') }}'s stream now!"
+      url: "https://www.twitch.tv/{{ state_attr(trigger.entity_id, 'friendly_name') | lower }}"
