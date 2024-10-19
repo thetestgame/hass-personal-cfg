@@ -1,0 +1,57 @@
+# This automation sends a notification when a monitored Twitch stream goes live.
+# 
+# description: A brief description of the automation (currently empty).
+# mode: Defines the execution mode of the automation (set to "single").
+# 
+# triggers:
+#   - trigger: state
+#     entity_id: List of entities to monitor (in this case, the sensor for "crream").
+#     attribute: The specific attribute to monitor (here, "started_at").
+# 
+# conditions:
+#   - condition: template
+#     value_template: A template condition that checks if the "started_at" attribute is not none.
+# 
+# actions:
+#   - action: notify.home_assistant
+#     data:
+#       message: The notification message to be sent.
+#       target: The target for the notification (using a secret for the Discord channel).
+#       data:
+#         embed:
+#           title: The title of the embedded message.
+#           description: The description of the embedded message.
+#           url: The URL to the Twitch stream.
+
+id: 'twitch_discord_notifications'
+alias: Twitch Discord Notifications
+description: "Sends a notification to Discord when a monitored Twitch stream goes live"
+mode: single
+triggers:
+  - platform: state
+    attribute: started_at
+
+    # List of monitored Twitch stream sensors to trigger the automation
+    entity_id:
+      - sensor.crream
+      - sensor.gassymexican
+      - sensor.burkeblack
+      - sensor.venalis
+      - sensor.tsunamicatvt
+      - sensor.chilledchaos
+      - sensor.linustech
+      - sensor.ray
+      - sensor.kutiekatt  
+conditions:
+  - condition: template
+    value_template: "{{ state_attr(trigger.entity_id, 'started_at') is not none }}"
+actions:
+  - service: notify.home_assistant
+    data:
+      message: "{{ state_attr(trigger.entity_id, 'friendly_name') }} just went live on Twitch"
+      target: !secret discord_channel_streaming_notifications
+      data:
+        embed:
+          title: "{{ state_attr(trigger.entity_id, 'friendly_name') }} just went live on Twitch"
+          description: "Watch {{ state_attr(trigger.entity_id, 'friendly_name') }}'s stream now!"
+          url: "https://www.twitch.tv/{{ state_attr(trigger.entity_id, 'friendly_name') | lower }}"
