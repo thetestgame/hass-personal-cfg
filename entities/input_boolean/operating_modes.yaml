@@ -1,0 +1,70 @@
+# This configuration file defines various input_boolean entities for different operating modes and notification settings.
+# Each entity has the following attributes:
+# - name: The display name of the mode or notification setting.
+# - icon: The icon representing the mode or notification setting.
+# - initial: The initial state of the mode or notification setting (on or off).
+#
+# Entities defined in this file:
+# - guest_mode: Represents the Guest Mode with an alert icon, initially off.
+# - work_mode: Represents the Work Mode with a briefcase icon, initially off.
+# - dont_disturb_mode: Represents the Do Not Disturb Mode with a minus-circle icon, initially off.
+# - alert_mode: Represents the Alert Mode with an alert-octagram icon, initially off.
+# - speech_notifications: Represents the Speech Notifications with a speaker-wireless icon, initially on.
+# - text_notifications: Represents the Text Notifications with a cellphone-wireless icon, initially on.
+
+############################################################################################################################################################################
+
+# Defines the input_boolean for tracking the state of Guest Mode. It is initially off.
+# and should be turned on when guests are present.
+guest_mode:
+  name: Guest Mode
+  icon: mdi:account-alert
+  initial: off
+
+############################################################################################################################################################################
+
+# Defines the input_boolean for tracking the state of Work Mode. It is initially off.
+# This mode is automatically activated during work hours to minimize distractions.
+work_mode:
+  name: Work Mode
+  icon: mdi:briefcase
+  initial: off
+
+############################################################################################################################################################################
+
+# Defines the input_boolean for tracking the state of Do Not Disturb Mode. It is initially off.
+# This mode is activated to prevent any notifications or disturbances. It is automatically managed
+# though it can be manually activated or deactivated.
+dont_disturb_mode:
+  name: Do Not Disturb Mode
+  icon: mdi:minus-circle
+  initial: off
+
+############################################################################################################################################################################
+
+# Defines the input_boolean for tracking the state of Alert Mode. It is initially off.
+# This mode is activated in case of emergencies or critical alerts.
+alert_mode:
+  name: Alert Mode
+  icon: mdi:alert-octagram
+  initial: off
+
+############################################################################################################################################################################
+
+# Defines the input_boolean for tracking the state of Speech Notifications. It is initially on.
+# This mode controls the speech notifications for the home assistant system.
+speech_notifications:
+  name: Speech Notifications
+  icon: mdi:speaker-wireless
+  initial: on
+
+############################################################################################################################################################################
+
+# Defines the input_boolean for tracking the state of Text Notifications. It is initially on.
+# This mode controls the text notifications for the home assistant system.
+text_notifications:
+  name: Text Notifications
+  icon: mdi:cellphone-wireless
+  initial: on
+  
+############################################################################################################################################################################
