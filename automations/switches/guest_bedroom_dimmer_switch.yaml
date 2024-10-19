@@ -1,0 +1,18 @@
+id: '1729140981816'
+alias: Guest Bedroom Dimmer Switch
+description: ''
+use_blueprint:
+  path: thetestgame/hue-remote-dimmer-december-2021.yaml
+  input:
+    dimmer_device: da800a5c6450479120cbbb311adebaf9
+    off_short_action: []
+    on_short_action:
+    - type: toggle
+      device_id: 6dbce6dfde2318312373bcb36487ad16
+      entity_id: c93fac0efe5009588debaefa2d835e00
+      domain: switch
+    brightness_up_short_action:
+    - type: toggle
+      device_id: 506c721c556b3d5cbc34d7a7f87bfdec
+      entity_id: 0e1326b7fb64cae4c6beb08876ad488a
+      domain: switch

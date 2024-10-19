@@ -1,12 +1,84 @@
+# Home Assistant Configuration.yaml
+#
+# This is the main configuration file for Home Assistant. It is used to define
+# the core settings, integrations, and automations for your Home Assistant instance.
+#
+# The configuration.yaml file is structured in a hierarchical format using YAML syntax.
+# Each section of the file corresponds to a different aspect of Home Assistant's functionality.
+#
+# Common sections include:
+#
+# - homeassistant: Core settings for Home Assistant, such as name, latitude, longitude, etc.
+# - frontend: Configuration for the Home Assistant frontend interface.
+# - http: Settings for the HTTP server, including SSL configuration.
+# - automation: Definitions for automations that trigger actions based on certain conditions.
+# - script: Scripts that can be executed manually or by automations.
+# - sensor: Configuration for various sensors that provide data to Home Assistant.
+# - binary_sensor: Configuration for binary sensors that have on/off states.
+# - switch: Configuration for switches that can be toggled on or off.
+# - light: Configuration for lights that can be controlled.
+# - media_player: Configuration for media players, such as TVs and speakers.
+#
+# Example:
+#
+# homeassistant:
+#   name: Home
+#   latitude: 32.87336
+#   longitude: 117.22743
+#   elevation: 430
+#   unit_system: metric
+#   currency: USD
+#
+# frontend:
+#   themes: !include themes.yaml
+#
+# http:
+#   ssl_certificate: /ssl/fullchain.pem
+#   ssl_key: /ssl/privkey.pem
+#
+# automation: !include automations.yaml
+# script: !include scripts.yaml
+# sensor: !include sensors.yaml
+#
+# For more information, refer to the official Home Assistant documentation:
+# https://www.home-assistant.io/docs/configuration/
 
 # Loads default set of integrations. Do not remove.
 default_config:
+
+# Define our base home assistant configuration
+# including the name of our home assistant instance and the currency we use
+# and other core settings.
+homeassistant:
+  name: Home
+  currency: USD
 
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
 
-automation: !include automations.yaml
-script: !include scripts.yaml
+# Load our logger and recorder configuration from their respective yaml files
+logger: !include logger.yaml
+recorder: !include recorder.yaml
+
+# Load all our scenes from the scenes.yaml file
 scene: !include scenes.yaml
-intent: !include intents.yaml
+
+# Load all our automation yaml files out of the automation folder.
+automation: !include_dir_list automations/
+
+# Load all our script yaml files out of the scripts folder.
+script: !include_dir_merge_named scripts/
+
+# Load our custom intents for our built in voice assistant components and satelites.
+# All yamls found within the intents folder will be combined and injected into the intent variable
+intent: !include_dir_merge_named intents/
+
+# Load all our custom entities from the entities folder. These files are seperated into 
+# different folders based on the type of entity they are.
+sensor: !include_dir_list entities/sensor/
+binary_sensor: !include_dir_list entities/binary_sensor/
+switch: !include_dir_list entities/switch/
+light: !include_dir_list entities/light/
+media_player: !include_dir_list entities/media_player/
+notify: !include_dir_merge_list entities/notify/

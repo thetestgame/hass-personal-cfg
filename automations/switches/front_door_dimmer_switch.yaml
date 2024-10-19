@@ -1,0 +1,19 @@
+id: '1729208905208'
+alias: Front Door Dimmer Switch
+description: ''
+use_blueprint:
+  path: thetestgame/hue-remote-dimmer-december-2021.yaml
+  input:
+    dimmer_device: 10a68e873d0b6d66dac16083702c9d2a
+    on_short_action:
+    - action: light.turn_on
+      metadata: {}
+      data: {}
+      target:
+        device_id: 15b7189bea73e446ac60ddf8a932c643
+    off_short_action:
+    - action: light.turn_off
+      metadata: {}
+      data: {}
+      target:
+        device_id: 15b7189bea73e446ac60ddf8a932c643

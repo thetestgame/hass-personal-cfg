@@ -1,0 +1,249 @@
+#
+#
+#
+
+############################################################################################################################################################################
+
+# Defines an intent named "MutePlayer" for muting or unmuting a media player.
+# The action section specifies the service to be called ("media_player.volume_mute") and the data required,
+# including the entity_id of the media player and the mute state (true for mute, false for unmute).
+# The speech section provides a response text that dynamically changes based on the mute state.
+MutePlayer:
+  action:
+    service: "media_player.volume_mute"
+    data:
+      entity_id: "{{ media_player }}"
+      is_volume_muted: "{{ mute_or_unmute }}"
+  speech:
+    text: |
+      {% if mute_or_unmute == "true" %}
+        Muted
+      {% else %}
+        Unmuted
+      {% endif %}
+
+############################################################################################################################################################################
+
+# This intent configuration is for muting or unmuting media players in a specific area.
+# 
+# MutePlayerArea:
+#   action:
+#     service: "media_player.volume_mute" - Calls the service to mute or unmute the volume of media players.
+#     data:
+#       entity_id: - Dynamically generates a list of media player entity IDs in the specified area that are currently playing.
+#       is_volume_muted: - Determines whether to mute or unmute the media players based on the value of "mute_or_unmute".
+#   speech:
+#     text: - Provides feedback on whether the media players have been muted or unmuted.
+#       If "mute_or_unmute" is "true", the response will be "Muted".
+#       Otherwise, the response will be "Unmuted".
+MutePlayerArea:
+  action:
+    service: "media_player.volume_mute"
+    data:
+      entity_id: "{{ expand(states.media_player) | selectattr('entity_id', 'in', area_entities(area)) | select('search', 'ma_') | selectattr('state', 'eq', 'playing') | map(attribute='entity_id') | join }}"
+      is_volume_muted: "{{ mute_or_unmute }}"
+  speech:
+    text: |
+      {% if mute_or_unmute == "true" %}
+        Muted
+      {% else %}
+        Unmuted
+      {% endif %}
+
+############################################################################################################################################################################
+
+# Defines an intent named "ShuffleSet" for setting the shuffle mode on a media player.
+# The action section specifies the service to be called ("media_player.shuffle_set") and the data required,
+# including the entity ID of the media player and the desired shuffle mode.
+# The speech section provides a text response to confirm that the shuffle mode has been set.
+ShuffleSet:
+  action:
+    service: "media_player.shuffle_set"
+    data:
+      entity_id: "{{ media_player }}"
+      shuffle: "{{ shuffle_mode }}"
+  speech:
+    text: "Queue shuffle mode set"
+
+############################################################################################################################################################################
+
+# Defines an intent named "ShuffleSetArea" for a home automation system.
+# The intent performs an action to set the shuffle mode for media players within a specified area.
+# 
+# Action:
+# - Service: "media_player.shuffle_set" - This service sets the shuffle mode for media players.
+# - Data:
+#   - entity_id: A list of media player entity IDs within the specified area that match the search criteria "ma_".
+#   - shuffle: The desired shuffle mode, provided by the variable "shuffle_mode".
+#
+# Speech:
+# - Text: "Queue shuffle mode set" - This message is spoken to confirm that the shuffle mode has been set.
+ShuffleSetArea:
+  action:
+    service: "media_player.shuffle_set"
+    data:
+      entity_id: "{{ expand(states.media_player) | selectattr('entity_id', 'in', area_entities(area)) | select('search', 'ma_') |map(attribute='entity_id') | join }}"
+      shuffle: "{{ shuffle_mode }}"
+  speech:
+    text: "Queue shuffle mode set"
+
+############################################################################################################################################################################
+
+# This configuration defines an intent named "RepeatSet" for setting the repeat mode of a media player.
+# The action section specifies the service to be called ("media_player.repeat_set") and the data required,
+# including the entity ID of the media player and the desired repeat mode.
+# The speech section provides a text response to confirm that the repeat mode has been set.
+RepeatSet:
+  action:
+    service: "media_player.repeat_set"
+    data:
+      entity_id: "{{ media_player }}"
+      repeat: "{{ repeat_mode }}"
+  speech:
+    text: "Queue repeat mode set"
+
+############################################################################################################################################################################
+
+# This configuration sets the repeat mode for media players within a specified area.
+# - `RepeatSetArea`: The intent to set the repeat mode.
+#   - `action`: Defines the service call to set the repeat mode.
+#     - `service`: The Home Assistant service to call, in this case, `media_player.repeat_set`.
+#     - `data`: The data to pass to the service.
+#       - `entity_id`: A list of media player entity IDs within the specified area that match the search criteria.
+#       - `repeat`: The desired repeat mode, provided by the `repeat_mode` variable.
+#   - `speech`: Defines the speech response.
+#     - `text`: The text to be spoken when the repeat mode is set.
+RepeatSetArea:
+  action:
+    service: "media_player.repeat_set"
+    data:
+      entity_id: "{{ expand(states.media_player) | selectattr('entity_id', 'in', area_entities(area)) | select('search', 'ma_') |map(attribute='entity_id') | join }}"
+      repeat: "{{ repeat_mode }}"
+  speech:
+    text: "Queue repeat mode set"
+
+############################################################################################################################################################################
+
+# This configuration defines an intent named "ClearQueueArea" for a home automation system.
+# 
+# The intent performs the following actions:
+# 1. Clears the playlist of media players in a specified area.
+#    - The `service` used is `media_player.clear_playlist`.
+#    - The `entity_id` is dynamically generated by expanding the states of all media players,
+#      filtering them based on their entity_id being in the specified area, matching a pattern
+#      ('ma_'), and having a state of 'playing'. The resulting entity_ids are joined into a single string.
+# 
+# 2. Provides a speech response indicating the queue has been cleared.
+#    - The `text` is dynamically generated by expanding the states of all media players,
+#      filtering them based on their entity_id being in the 'study' area, matching a pattern ('ma_'),
+#      and then mapping to their friendly names. The resulting names are joined into a single string
+#      followed by "Queue cleared".
+ClearQueueArea:
+  action:
+    service: "media_player.clear_playlist"
+    data:
+      entity_id: "{{ expand(states.media_player) | selectattr('entity_id', 'in', area_entities(area)) | select('search', 'ma_') | selectattr('state', 'eq', 'playing') | map(attribute='entity_id') | join }}"
+  speech:
+    text: "{{ expand(states.media_player) | selectattr('entity_id', 'in', area_entities('study')) | select('search', 'ma_') |map(attribute='attributes.friendly_name') | join }} Queue cleared"
+
+############################################################################################################################################################################
+
+# This configuration defines an intent named "ClearQueue" for a music player.
+# When triggered, it performs the following actions:
+# - Calls the "media_player.clear_playlist" service to clear the current playlist.
+# - Uses the "entity_id" provided in the data to specify which media player to target.
+# - Responds with a speech text "Queue cleared" to confirm the action.
+ClearQueue:
+  action:
+    service: "media_player.clear_playlist"
+    data:
+      entity_id: "{{ media_player }}"
+  speech:
+    text: "Queue cleared"
+  
+############################################################################################################################################################################
+
+# This configuration defines an intent named "PlayerStop" for a music player.
+# When triggered, it performs the following actions:
+# - Calls the "media_player.media_stop" service to stop the media player.
+# - Uses the "entity_id" provided by the "media_player" variable.
+# - Responds with the speech text "Stopped".
+PlayerStop:
+  action:
+    service: "media_player.media_stop"
+    data:
+      entity_id: "{{ media_player }}"
+  speech:
+    text: "Stopped"
+
+############################################################################################################################################################################
+
+# This configuration defines an intent named "PlayerStopArea" for a home automation system.
+# When triggered, it performs the following actions:
+# - Calls the "media_player.media_stop" service to stop media playback.
+# - Targets media player entities within a specified area that have an entity_id containing "ma_" and are currently in the "playing" state.
+# - Joins the filtered entity_ids into a single string for the service call.
+# - Provides a speech response with the text "Stopped" to confirm the action.
+PlayerStopArea:
+  action:
+    service: "media_player.media_stop"
+    data:
+      entity_id: "{{ expand(states.media_player) | selectattr('entity_id', 'in', area_entities(area)) | select('search', 'ma_') | selectattr('state', 'eq', 'playing') | map(attribute='entity_id') | join }}"
+  speech:
+    text: "Stopped"
+
+############################################################################################################################################################################
+
+# This configuration defines an intent named "SelectSource" for a music player.
+# When triggered, it performs the following actions:
+# - Calls the "media_player.select_source" service.
+# - Passes the entity_id and desired source as data to the service.
+# Additionally, it provides a speech response indicating the source has been set.
+SelectSource:
+  action:
+    service: "media_player.select_source"
+    data:
+      entity_id: "{{ media_player }}"
+      source: "{{ desired_source }}"
+  speech:
+    text: "{{ media_player }} source set to {{ desired_source }}"
+
+############################################################################################################################################################################
+
+# This configuration defines an intent named "PlayerJoin" for a media player system.
+# 
+# The "action" section specifies the service call to "media_player.join", which joins a media player to a group.
+# - "target.entity_id" is dynamically set using the "media_player_group" variable.
+# - "data.group_members" is dynamically set using the "media_player" variable.
+#
+# The "speech" section provides a text response that confirms the action.
+# - It uses Jinja2 templates to dynamically generate the names of the media players involved.
+# - "{{ states.media_player | selectattr('entity_id','eq',media_player) | map(attribute='attributes.friendly_name') | list | join }}" retrieves and joins the friendly names of the media players being added.
+# - "{{ states.media_player | selectattr('entity_id','eq',media_player_group) | map(attribute='attributes.friendly_name') | list | join }}" retrieves and joins the friendly names of the media player groups.
+PlayerJoin:
+  action:
+    service: "media_player.join"
+    target:
+      entity_id: "{{ media_player_group }}"
+    data:
+      group_members: "{{ media_player }}"
+  speech:
+    text: "{{ states.media_player | selectattr('entity_id','eq',media_player) | map(attribute='attributes.friendly_name') | list | join }}  joined to {{ states.media_player | selectattr('entity_id','eq',media_player_group) | map(attribute='attributes.friendly_name') | list | join }} "
+
+############################################################################################################################################################################
+
+# This YAML configuration defines an intent named "PlayerUnjoin" for a media player.
+# When triggered, it performs the following actions:
+# - Calls the "media_player.unjoin" service to unjoin a media player from a group.
+# - The target media player is specified by the "entity_id" placeholder "{{ media_player }}".
+# - Provides a speech response indicating the friendly name of the media player that was removed from the group.
+#   The friendly name is dynamically retrieved from the state attributes of the specified media player.
+PlayerUnjoin:
+  action:
+    service: "media_player.unjoin"
+    target:
+      entity_id: "{{ media_player }}"
+  speech:
+    text: "{{ states.media_player | selectattr('entity_id','eq',media_player) | map(attribute='attributes.friendly_name') | list | join }} removed from group"
+
+############################################################################################################################################################################

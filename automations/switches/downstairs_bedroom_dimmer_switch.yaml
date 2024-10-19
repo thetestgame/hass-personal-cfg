@@ -1,0 +1,19 @@
+id: '1729042831154'
+alias: Downstairs Bedroom Dimmer Switch
+description: ''
+use_blueprint:
+  path: thetestgame/hue-remote-dimmer-december-2021.yaml
+  input:
+    dimmer_device: 878d3cee8093dcd710d9ddc0855b2579
+    on_short_action:
+    - action: homeassistant.turn_on
+      metadata: {}
+      data: {}
+      target:
+        area_id: jordans_room
+    off_short_action:
+    - action: homeassistant.turn_off
+      metadata: {}
+      data: {}
+      target:
+        area_id: jordans_room

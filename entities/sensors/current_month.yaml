@@ -1,0 +1,4 @@
+platform: template
+sensors:
+  current_month:
+    value_template: "{% set months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] %} {{ now().day | string + ' ' + months[now().month-1]}}"

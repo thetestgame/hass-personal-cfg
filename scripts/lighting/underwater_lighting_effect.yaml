@@ -1,0 +1,39 @@
+# This YAML configuration defines an automation script for creating an underwater lighting effect.
+# 
+# alias: The name of the script, "Underwater Light Effect".
+# 
+# sequence: The sequence of actions to be performed by the script.
+# - service: The service to be called, in this case, turning on a light.
+#   data_template: The data to be passed to the service, using templates.
+#     entity_id: The entity ID of the light to be controlled, provided as a template variable.
+#     brightness_pct: The brightness percentage of the light, randomly chosen between 20% and 40%.
+#     transition: The transition time in seconds for the light to reach the specified brightness.
+#     rgb_color: The RGB color of the light, with each component randomly chosen within specified ranges to simulate underwater colors.
+# 
+# icon: The icon representing the script, set to "mdi:waves".
+# 
+# mode: The mode of the script execution, set to "single" to ensure the script runs only once at a time.
+# 
+# fields: The input fields for the script.
+#   entity: 
+#     description: A description of the entity field, indicating it should be the entity that will simulate an underwater effect.
+#     example: An example value for the entity field, such as "light.bedroom_ceiling".
+
+underwater_lighting_effect:
+  alias: Underwater Light Effect
+  sequence:
+  - service: light.turn_on
+    data_template:
+      entity_id: '{{ entity }}'
+      brightness_pct: '{{ range(20, 40, 2) | random }}'
+      transition: 2
+      rgb_color:
+      - '{{ range(0, 100) | random }}'
+      - '{{ range(100, 180) | random }}'
+      - '{{ range(180, 255) | random }}'
+  icon: mdi:waves
+  mode: single
+  fields:
+    entity:
+      description: The entity that will simulate an underwater effect
+      example: light.bedroom_ceiling

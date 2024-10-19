@@ -1,0 +1,19 @@
+id: '1729118413392'
+alias: Living Room Kitchen Dimmer Switch
+description: ''
+use_blueprint:
+  path: thetestgame/hue-remote-dimmer-december-2021.yaml
+  input:
+    dimmer_device: e23876a6f2f9613cf683427033ce72d0
+    on_short_action:
+    - action: light.turn_on
+      metadata: {}
+      data: {}
+      target:
+        entity_id: light.living_room_hue_room
+    off_short_action:
+    - action: light.turn_off
+      metadata: {}
+      data: {}
+      target:
+        entity_id: light.living_room_hue_room

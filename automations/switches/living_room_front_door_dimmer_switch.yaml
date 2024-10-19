@@ -1,0 +1,19 @@
+id: '1729118376373'
+alias: Living Room Front Door Dimmer Switch
+description: ''
+use_blueprint:
+  path: thetestgame/hue-remote-dimmer-december-2021.yaml
+  input:
+    dimmer_device: 7e1122392424f528ec8cf66590118d1f
+    on_short_action:
+    - action: light.turn_on
+      metadata: {}
+      data: {}
+      target:
+        entity_id: light.living_room_hue_room
+    off_short_action:
+    - action: light.turn_off
+      metadata: {}
+      data: {}
+      target:
+        entity_id: light.living_room_hue_room

@@ -1,0 +1,51 @@
+# This script creates a lightning light effect for a specified light entity.
+# The light will turn on at full brightness and a specified color temperature,
+# then turn off after a short delay, simulating a lightning flash.
+# After a random delay, the light will flash again briefly before turning off.
+#
+# Parameters:
+#   entity: The entity that will be controlled (e.g., light.bathroom)
+#
+# Example usage:
+#   entity: light.bathroom
+
+lightning_lighting_effect:
+  alias: Lightning Light Effect
+  mode: single
+  icon: mdi:flash
+  fields:
+    entity:
+      description: The entity that will be controlled
+      example: light.bathroom
+  sequence:
+  - service: light.turn_on
+    target:
+      entity_id: '{{ entity }}'
+    data:
+      brightness: 255
+      color_temp: 300
+      transition: 0
+  - delay: '00:00:00.500'
+  - service: light.turn_off
+    target:
+      entity_id: '{{ entity }}'
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: '{{ range(2, 6) | random }}'
+      milliseconds: '{{ range(0, 1000) | random }}'
+  - service: light.turn_on
+    target:
+      entity_id: '{{ entity }}'
+    data:
+      brightness: 255
+      color_temp: 300
+      transition: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 150
+  - service: light.turn_off
+    target:
+      entity_id: '{{ entity }}'

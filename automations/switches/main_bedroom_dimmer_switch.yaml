@@ -1,0 +1,13 @@
+id: '1729218081140'
+alias: Main Bedroom Dimmer Switch
+description: ''
+use_blueprint:
+  path: thetestgame/hue-remote-dimmer-december-2021.yaml
+  input:
+    dimmer_device: de8585b8a6d428fdc201750c5a4b9de8
+    on_short_action:
+    - action: switch.toggle
+      metadata: {}
+      data: {}
+      target:
+        entity_id: switch.main_bedroom_lamps

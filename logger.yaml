@@ -1,0 +1,59 @@
+# Configuration file for logging settings in Home Assistant.
+# 
+# This file defines the default logging level and specific logging levels for various components.
+# 
+# Fields:
+# - default: The default logging level for all components not explicitly listed.
+# - logs: A dictionary where keys are component names and values are their respective logging levels.
+# 
+# Logging Levels:
+# - critical: Only critical errors that require immediate attention.
+# - error: Errors that should be addressed but are not critical.
+# - warn: Warnings that indicate potential issues.
+# - info: Informational messages that highlight the progress of the application.
+# 
+# Example:
+# - aiohttp.access: critical
+#   Sets the logging level for the aiohttp.access component to critical.
+
+default: info
+logs:
+  aiohttp.access: critical
+  aiohttp.server: critical
+  aiounifi: error
+  custom_components.hacs: error
+  queueman: error
+  AIOGitHubAPI: error
+  hacs: error
+  homeassistant.core: error
+  homeassistant.config_entries: error
+  homeassistant.components.automation: warn
+  homeassistant.components.binary_sensor: error
+  homeassistant.components.climate.nest: warn
+  homeassistant.components.device_tracker: error
+  homeassistant.components.discovery: warn
+  homeassistant.components.feedreader: error
+  homeassistant.components.http: warn
+  homeassistant.components.ipp: critical
+  homeassistant.components.media_player: info
+  homeassistant.components.mqtt.discovery: critical
+  homeassistant.components.rest.sensor: critical
+  homeassistant.components.recorder: error
+  homeassistant.components.sensor.pi_hole: critical
+  homeassistant.components.sensor.rest: info
+  homeassistant.components.sensor.darksky: warn
+  homeassistant.components.tplink.switch: error
+  homeassistant.components.unifi: error
+  homeassistant.components.device_tracker.unifi: error
+  homeassistant.components.switch.unifi: error
+  homeassistant.components.zwave: warn
+  homeassistant.exceptions: info
+  homeassistant.helpers.script: info
+  homeassistant.helpers.entity: critical
+  homeassistant.loader: warn
+  pubnub: critical
+  py.warnings: error
+  pyhap.hap_server: warn
+  urllib3.connectionpool: error
+  requests.packages.urllib3.connectionpool: critical
+  root: warn
