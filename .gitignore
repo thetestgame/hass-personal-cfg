@@ -184,10 +184,7 @@ dlib_unknown_faces
 .spotify-token-cache
 
 dwains-dashboard/
-custom_components/grocy
-custom_components/mail_and_packages
-custom_components/dwains_dashboard
-custom_components/hacs
+custom_components/
 addons_autoscripts/
 addons_config/
 
