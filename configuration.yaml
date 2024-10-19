@@ -23,8 +23,6 @@
 #
 # homeassistant:
 #   name: Home
-#   latitude: 32.87336
-#   longitude: 117.22743
 #   elevation: 430
 #   unit_system: metric
 #   currency: USD
@@ -77,8 +75,11 @@ intent: !include_dir_merge_named intents/
 # Load all our custom entities from the entities folder. These files are seperated into 
 # different folders based on the type of entity they are.
 binary_sensor: !include_dir_merge_named  entities/binary_sensor/
-group: !include_dir_merge_named  entities/group/
 input_boolean: !include_dir_merge_named  entities/input_boolean/
+
+template: !include_dir_merge_named entities/templates/
+group: !include_dir_merge_named  entities/group/
+
 light: !include_dir_merge_named  entities/light/
 media_player: !include_dir_merge_named  entities/media_player/
 notify: !include_dir_merge_named  entities/notify/

@@ -1,3 +1,6 @@
+
+############################################################################################################################################################################
+
 # Discord Notification Script
 #
 # This script sends notifications to a specified Discord channel using the Home Assistant notify service.
@@ -16,7 +19,7 @@
 # The script uses conditional logic to determine the appropriate notify service and target channel ID based on the input variables.
 
 discord_notify_service:
-  name: "Discord Notify Service"
+  alias: "Discord Notify Service"
   sequence:
     - service: >
         {% if who == 'home_assistant' %}
@@ -27,7 +30,7 @@ discord_notify_service:
           notify.home_assistant
         {% endif %}
       data:
-        message: "{{ message }}"
+        message: "Wow! This is a cool message!"
         target: >
           {% if channel == 'test-titor' %}
             401996093786685442
@@ -57,3 +60,76 @@ discord_notify_service:
             title: "{{ title }}"
             description: "{{ description }}"
             url: "{{ url }}"
+        
+############################################################################################################################################################################
+
+# Discord AI Response Service
+#
+# This script processes a message using a Home Assistant conversation agent and sends the response to a specified Discord channel.
+# The agent used for processing the message is determined based on the user and channel variables.
+#
+# Variables:
+# - who: The user to process the message. Possible values are 'alice' or any other user.
+# - message: The message content to be processed.
+# - channel: The target Discord channel. Possible values include 'test-titor', 'nt-infrastructure', 'nt-streaming',
+#            'nt-github', 'nt-games', 'nt-tasks', 'general', 'dev-smart-home', 'dev-discord-bot', 'dev-notes',
+#            or any other channel.
+# - title: The title of the embedded message.
+# - description: The description of the embedded message.
+# - url: The URL to be included in the embedded message.
+#
+# The script uses conditional logic to determine the appropriate conversation agent and notify service based on the input variables.
+
+discord_ai_respoonse_service:
+  alias: "Discord AI Response Service"
+  sequence:
+    - service: conversation.process
+      data:
+        agent_id: >
+          {% if who == 'alice' %}
+            conversation.gpt_alice_personality
+          {% else %}
+            conversation.gpt_ada_personality
+          {% endif %}
+        text: "{{ message }}"
+      response_variable: agent
+
+    - service: >
+        {% if who == 'alice' %}
+          notify.alice
+        {% else %}
+          notify.home_assistant
+        {% endif %}
+      data:
+        message: "{{ agent.response.speech.plain.speech }}"
+        target: >
+          {% if channel == 'test-titor' %}
+            401996093786685442
+          {% elif channel == 'nt-infrastructure' %}
+            1257852697806372874
+          {% elif channel == 'nt-streaming' %}
+            1297006644294717450
+          {% elif channel == 'nt-github' %}
+            1295767985360736256
+          {% elif channel == 'nt-games' %}
+            1295768803493412985
+          {% elif channel == 'nt-tasks' %}
+            1297266156230545461
+          {% elif channel == 'general' %}
+            1257852904312672326
+          {% elif channel == 'dev-smart-home' %}
+            1295769567158866043
+          {% elif channel == 'dev-discord-bot' %}
+            1295769593805279242
+          {% elif channel == 'dev-notes' %}
+            1265472645617422487
+          {% else %}
+            1257852904312672326
+          {% endif %}
+        data:
+          embed:
+            title: "{{ title }}"
+            description: "{{ description }}"
+            url: "{{ url }}"
+
+############################################################################################################################################################################
