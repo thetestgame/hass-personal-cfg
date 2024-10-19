@@ -42,6 +42,7 @@ triggers:
       - sensor.linustech
       - sensor.ray
       - sensor.kutiekatt  
+      - sensor.tlt0r
 conditions:
   - condition: template
     value_template: "{{ state_attr(trigger.entity_id, 'started_at') is not none }}"

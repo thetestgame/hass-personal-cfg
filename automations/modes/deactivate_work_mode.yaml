@@ -1,0 +1,31 @@
+# This automation deactivates the 'Work Mode' at 5:00 PM on workdays.
+# 
+# id: Unique identifier for the automation.
+# alias: Human-readable name for the automation.
+# description: Detailed explanation of what the automation does.
+# trigger: Specifies the condition that triggers the automation.
+#   - platform: The platform type, in this case, time.
+#   - at: The specific time when the automation should trigger (5:00 PM).
+# condition: Conditions that must be met for the automation to run.
+#   - condition: The type of condition, in this case, state.
+#   - entity_id: The entity to check the condition against (workday sensor).
+#   - state: The required state of the entity (must be 'on' indicating a workday).
+# action: The actions to perform when the automation is triggered and conditions are met.
+#   - service: The service to call, in this case, turning off an input boolean.
+#   - target: The target entity for the service call.
+#     - entity_id: The specific entity to turn off (work mode).
+
+id: 'deactivate_work_mode'
+alias: "Deactivate Work Mode"
+description: "Deactivates the 'Work Mode' at 5:00 PM on work days."
+trigger:
+  - platform: time
+    at: "17:00:00"
+condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+action:
+  - service: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.work_mode

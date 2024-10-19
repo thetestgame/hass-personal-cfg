@@ -76,10 +76,10 @@ intent: !include_dir_merge_named intents/
 
 # Load all our custom entities from the entities folder. These files are seperated into 
 # different folders based on the type of entity they are.
-binary_sensor: !include_dir_list entities/binary_sensor/
-input_boolean: !include_dir_list entities/input_boolean/
-light: !include_dir_list entities/light/
-media_player: !include_dir_list entities/media_player/
-notify: !include_dir_merge_list entities/notify/
-sensor: !include_dir_list entities/sensor/
-switch: !include_dir_list entities/switch/
+binary_sensor: !include_dir_merge_named  entities/binary_sensor/
+input_boolean: !include_dir_merge_named  entities/input_boolean/
+light: !include_dir_merge_named  entities/light/
+media_player: !include_dir_merge_named  entities/media_player/
+notify: !include_dir_merge_named  entities/notify/
+sensor: !include_dir_merge_named  entities/sensor/
+switch: !include_dir_merge_named  entities/switch/

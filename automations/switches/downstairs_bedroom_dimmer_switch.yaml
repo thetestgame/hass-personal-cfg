@@ -5,6 +5,8 @@ use_blueprint:
   path: thetestgame/hue-remote-dimmer-december-2021.yaml
   input:
     dimmer_device: 878d3cee8093dcd710d9ddc0855b2579
+
+    # Map the primary on/off buttons to turn on/off the lights in Jordan's room.
     on_short_action:
     - action: homeassistant.turn_on
       metadata: {}
@@ -17,3 +19,18 @@ use_blueprint:
       data: {}
       target:
         area_id: jordans_room
+
+    # Map the brightness up and down actions to turn on/off the adjacent office lights
+    # when pressed for convenience.
+    brightness_up_short_action:
+      - action: homeassistant.turn_on
+        metadata: {}
+        data: {}
+        target:
+          area_id: office
+    brightness_down_short_action:
+      - action: homeassistant.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: office
