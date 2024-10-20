@@ -1,0 +1,22 @@
+# This YAML configuration file defines a group of interior and exterior lighting entities.
+# The groups are named "Interior Lights" and "Exterior Lights" respectively.
+
+############################################################################################################################################################################
+
+# Interior lighting entities
+interior_lights:
+  name: Interior Lights
+  icon: mdi:lightbulb
+  entities: 
+    - light.living_room
+
+############################################################################################################################################################################
+
+# Exterior lighting entities
+exterior_lights:
+  name: Exterior Lights
+  icon: mdi:lightbulb
+  entities:
+    - light.porch
+
+############################################################################################################################################################################

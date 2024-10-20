@@ -1,0 +1,71 @@
+#
+# This configuration file sets up the Lovelace UI for Home Assistant in YAML mode.
+#
+# Resources Section:
+# - Loads custom resources (JavaScript modules) from the www folder, which maps to the /local/ web directory on Home Assistant's web server.
+# - These resources are typically installed via the Home Assistant Community Store (HACS).
+#
+# Dashboards Section:
+# - Defines custom dashboards for different devices (e.g., desktop and mobile).
+# - Each dashboard has its own configuration, including mode, title, icon, visibility in the sidebar, filename, and admin requirements.
+
+# Set our mode to yaml.
+mode: yaml
+
+# Load our custom resources from the www folder.
+# Most of these were installed with HACS.
+#
+# Note: www maps to the /local/ web directory on Home Assistant's web server. So if you have a file in www called
+# /www/community/atomic_calendar-revive/atomic-calendar-revieve.js, you would reference it in the resources section
+# like so: /local/community/atomic_calendar-revive/atomic-calendar-revieve.js
+resources:
+  - type: module
+    url: /local/community/atomic-calendar-revive/atomic-calendar-revieve.js
+  - type: module
+    url: /local/community/button-card/button-card.js
+  - type: module
+    url: /local/community/decluttering-card/decluttering-card.js
+  - type: module
+    url: /local/community/frigate-card/frigate-card.js
+  - type: module
+    url: /local/community/light-entity-card/light-entity-card.js
+  - type: module
+    url: /local/community/lovelace-card-mod/card-mod.js
+  - type: module
+    url: /local/community/lovelace-multiple-entity-row/multiple-entity-row.js
+  - type: module
+    url: /local/community/lovelace-paper-buttons-row/paper-buttons-row.js
+  - type: module
+    url: /local/community/lovelace-slider-entity-row/slider-entity-row.js
+  - type: module
+    url: /local/community/mini-graph-card/mini-graph-card-bundle.js
+  - type: module
+    url: /local/community/mini-media-player/mini-media-player-bundle.js
+  - type: module
+    url: /local/community/rgb-light-card/rgb-light-card.js
+  - type: module
+    url: /local/community/slider-button-card/slider-button-card.js
+  - type: module
+    url: /local/community/vertical-stack-in-card/vertical-stack-in-card.js
+  - type: module
+    url: /local/community/weather-card/weather-card.js
+
+# Load our custom dashboards.
+dashboards:
+  # Configuration for a custom desktop dashboard.
+  desktop-dashboard:
+    mode: yaml
+    title: Desktop Dashboard
+    icon: mdi:desktop-mac-dashboard
+    show_in_sidebar: true
+    filename: dashboards/desktop/layout.yaml
+    require_admin: false
+
+  # Configuration for a custom mobile dashboard.
+  mobile-dashboard:
+    mode: yaml
+    title: Mobile Dashboard
+    icon: mdi:cellphone
+    show_in_sidebar: true
+    filename: dashboards/mobile/layout.yaml
+    require_admin: false

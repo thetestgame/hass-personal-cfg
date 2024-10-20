@@ -8,7 +8,7 @@
 # - input_boolean.speech_notifications: Represents speech notifications.
 # - input_boolean.text_notifications: Represents text notifications.
 
-operating_modes:
+operating_modes_group:
   name: Operating Modes
   icon: mdi:cog
   entities:

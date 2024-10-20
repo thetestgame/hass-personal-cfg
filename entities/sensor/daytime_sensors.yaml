@@ -1,0 +1,23 @@
+# This YAML configuration file defines template sensors for Home Assistant.
+# 
+# Sensors:
+# 1. day_en:
+#    - Platform: template
+#    - Description: Provides the current day of the week in English.
+#    - value_template: Uses a list of days to map the current weekday number (0-6) to the corresponding day name.
+#
+# 2. date_en:
+#    - Platform: template
+#    - Description: Provides the current date in the format "day month" (e.g., "15 January").
+#    - value_template: Uses a list of months to map the current month number (1-12) to the corresponding month name.
+
+- platform: template
+  sensors:
+    day_en:
+      unique_id: "day_en"
+      friendly_name: "Day English"
+      value_template: "{{ now().strftime('%A') }}"
+    date_en:
+      unique_id: "date_en"
+      friendly_name: "Month English"
+      value_template: "{% set months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] %} {{ now().day | string + ' ' + months[now().month-1]}}"

@@ -1,0 +1,70 @@
+# This file contains all the binary sensors that are used to detect the presence of people in the house.
+# These sensors are used to trigger automations that require the presence of someone at home.
+# The sensors are also used to determine if the house is occupied or not.
+
+############################################################################################################################################################################
+
+# Detects if anyone from the household is currently at home.
+# This is used to determine if the house is occupied or not.
+# This sensor is used to trigger automations that require the presence of someone at home.
+- platform: template
+  sensors:
+    someone_home:
+      friendly_name: Someone Home
+      icon_template: >-
+        {% if is_state('binary_sensor.someone_home','on') %} 
+          mdi:home-account
+        {% else %} 
+          mdi:home-outline
+        {% endif %}
+      value_template: "{{ is_state('person.jordan_maxwell','Home') or is_state('person.dana_taylor','Home') or is_state('person.hailey_maxwell','Home') }}"
+
+############################################################################################################################################################################
+
+# Detects if Jordan Maxwell is currently at home.
+# This sensor is used to trigger automations that require Jordan to be at home.
+- platform: template
+  sensors:  
+    jordan_maxwell_presence:
+      friendly_name: Jordan Maxwell Present
+      icon_template: >-
+        {% if is_state('binary_sensor.jordan_maxwell_presence','on') %} 
+          mdi:account
+        {% else %} 
+          mdi:account-outline
+        {% endif %}
+      value_template: "{{ is_state('person.jordan_maxwell','Home') }}"
+
+############################################################################################################################################################################
+
+# Detects if Dana Taylor is currently at home.
+# This sensor is used to trigger automations that require Dana to be at home.
+- platform: template
+  sensors:  
+    dana_taylor_presence:
+      friendly_name: Dana Taylor Present
+      icon_template: >-
+        {% if is_state('binary_sensor.dana_taylor_presence','on') %} 
+          mdi:account
+        {% else %} 
+          mdi:account-outline
+        {% endif %}
+      value_template: "{{ is_state('person.dana_taylor','Home') }}"
+
+############################################################################################################################################################################
+
+# Detects if Hailey Maxwell is currently at home.
+# This sensor is used to trigger automations that require Hailey to be at home.
+- platform: template
+  sensors:  
+    hailey_maxwell_presence:
+      friendly_name: Hailey Maxwell Present
+      icon_template: >-
+        {% if is_state('binary_sensor.hailey_maxwell_presence','on') %} 
+          mdi:account
+        {% else %} 
+          mdi:account-outline
+        {% endif %}
+      value_template: "{{ is_state('person.hailey_maxwell','Home') }}"
+
+############################################################################################################################################################################

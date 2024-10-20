@@ -30,7 +30,7 @@ discord_notify_service:
           notify.home_assistant
         {% endif %}
       data:
-        message: "Wow! This is a cool message!"
+        message: "{{ message }}"
         target: >
           {% if channel == 'test-titor' %}
             401996093786685442

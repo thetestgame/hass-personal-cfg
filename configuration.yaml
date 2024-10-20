@@ -54,6 +54,8 @@ homeassistant:
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
 
 # Load our logger and recorder configuration from their respective yaml files
 logger: !include logger.yaml
@@ -62,8 +64,15 @@ recorder: !include recorder.yaml
 # Load all our scenes from the scenes.yaml file
 scene: !include scenes.yaml
 
+# Load all our lovelace dashboards from the dashboards folder using
+# our lovelace configuration yaml file.
+lovelace: !include lovelace.yaml
+
 # Load all our automation yaml files out of the automation folder.
+# We also specify an automation ui file to allow the creation of automations
+# from the Home Assistant Frontend.
 automation: !include_dir_list automations/
+automation ui: !include automations.yaml
 
 # Load all our script yaml files out of the scripts folder.
 script: !include_dir_merge_named scripts/
@@ -74,14 +83,17 @@ intent: !include_dir_merge_named intents/
 
 # Load all our custom entities from the entities folder. These files are seperated into 
 # different folders based on the type of entity they are.
-binary_sensor: !include_dir_merge_named  entities/binary_sensor/
-input_boolean: !include_dir_merge_named  entities/input_boolean/
+input_boolean: !include_dir_merge_named entities/input_boolean/
 
 template: !include_dir_merge_named entities/templates/
-group: !include_dir_merge_named  entities/group/
+group: !include_dir_merge_named entities/group/
+notify: !include_dir_merge_named entities/notify/
 
-light: !include_dir_merge_named  entities/light/
-media_player: !include_dir_merge_named  entities/media_player/
-notify: !include_dir_merge_named  entities/notify/
-sensor: !include_dir_merge_named  entities/sensor/
-switch: !include_dir_merge_named  entities/switch/
+media_player: !include_dir_merge_named entities/media_player/
+switch: !include_dir_merge_named entities/switch/
+
+# Lighting and Sensors are mostly just groups and templates so we 
+# load with merge_list instead of merge_named to fit the expected format.
+light: !include_dir_merge_list entities/light/
+sensor: !include_dir_merge_list entities/sensor/
+binary_sensor: !include_dir_merge_list entities/binary_sensor/

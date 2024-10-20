@@ -1,0 +1,16 @@
+# Configuration for the Living Room Lamps group entity.
+# This entity groups multiple individual light entities into a single control point.
+# 
+# Attributes:
+# - platform: Specifies the platform type, in this case, 'group'.
+# - name: The friendly name for the group entity.
+# - unique_id: A unique identifier for the group entity.
+# - entities: A list of individual light entities that are part of this group.
+
+# Lamps in the living room
+- platform: group
+  name: Living Room Lamps
+  unique_id: living_room_lamps
+  entities:
+      - light.big_living_room_lamp
+      - light.living_room_floor_lamp

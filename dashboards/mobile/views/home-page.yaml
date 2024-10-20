@@ -1,0 +1,1097 @@
+- theme: noctis
+  icon: ''
+  path: default_view
+  title: HOME
+  visible:
+    - user: a27a825440914ad7a919367c2e53793e
+    - user: aadd52d881af46bca495e279bee867bf
+    - user: 10a78a75e63f4c5ba22a81742f59b925
+  type: sidebar
+  badges: []
+  cards:
+    - type: custom:decluttering-card
+      template: header_live_weather_background
+    - type: custom:decluttering-card
+      template: header_temperature_graph
+    - type: custom:decluttering-card
+      template: header_main
+    - type: custom:decluttering-card
+      template: header_conditional_camera
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: custom:slider-button-card
+              entity: light.living_room_lamps
+              slider:
+                direction: left-right
+                background: gradient
+                use_state_color: true
+                use_percentage_bg_opacity: true
+                show_track: false
+                toggle_on_click: false
+                force_square: false
+              show_name: true
+              show_state: false
+              compact: true
+              icon:
+                show: true
+                use_state_color: false
+                icon: mdi:home-lightbulb
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/living_room
+              action_button:
+                mode: custom
+                icon: mdi:chevron-right
+                show_spinner: false
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/living_room
+              style: |
+                :host {
+                  margin-right: 7px !important;
+                }
+                ha-card > div > div.text {
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin-top: -1px;
+                  letter-spacing: -0.2px;
+                }
+                div.icon {
+                  margin: 4px 2px 4px 4px;
+                  font-size: 10px;
+                }
+                ha-card > div > div.text > div {
+                  overflow: visible;
+                }
+                ha-card { 
+                  border-radius: 26px !important;
+                }
+                ha-card > div > div.action {
+                  position: absolute;
+                  top: 13px;
+                  right: 6px;
+                  font-size: 12px;
+                }
+            - type: custom:slider-button-card
+              entity: light.living_room_lamps
+              slider:
+                direction: left-right
+                background: gradient
+                use_state_color: true
+                use_percentage_bg_opacity: true
+                show_track: false
+                toggle_on_click: false
+                force_square: false
+              show_name: true
+              show_state: false
+              compact: true
+              icon:
+                show: true
+                use_state_color: false
+                icon: mdi:fridge
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/cuisine
+              action_button:
+                mode: custom
+                icon: mdi:chevron-right
+                show_spinner: false
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/cuisine
+              style: |
+                :host {
+                  font-weight: 600;
+                  margin-left: 7px !important;
+                }
+                ha-card > div > div.text {
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin-top: -1px;
+                  letter-spacing: -0.2px;
+                }
+                div.icon {
+                  margin: 4px 2px 4px 4px;
+                  font-size: 10px;
+                }
+                ha-card > div > div.text > div {
+                  overflow: visible;
+                }
+                ha-card { 
+                  border-radius: 26px !important;
+                }
+                ha-card > div > div.action {
+                  position: absolute;
+                  top: 13px;
+                  right: 6px;
+                  font-size: 12px;
+                }
+      style: |
+        ha-card { 
+          margin: 14px 20px !important;
+          background: none;
+        }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: custom:slider-button-card
+              entity: light.living_room_lamps
+              slider:
+                direction: left-right
+                background: gradient
+                use_state_color: true
+                use_percentage_bg_opacity: true
+                show_track: false
+                toggle_on_click: false
+                force_square: false
+              show_name: true
+              show_state: false
+              compact: true
+              icon:
+                show: true
+                use_state_color: false
+                icon: mdi:silverware-fork-knife
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/salle_a_manger
+              action_button:
+                mode: custom
+                icon: mdi:chevron-right
+                show_spinner: false
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/salle_a_manger
+              style: |
+                :host {
+                  font-weight: 600;
+                  margin-right: 7px !important;
+                }
+                ha-card > div > div.text {
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin-top: -1px;
+                  letter-spacing: -0.2px;
+                }
+                div.icon {
+                  margin: 4px 2px 4px 4px;
+                  font-size: 10px;
+                }
+                ha-card > div > div.text > div {
+                  overflow: visible;
+                }
+                ha-card { 
+                  border-radius: 26px !important;
+                }
+                ha-card > div > div.action {
+                  position: absolute;
+                  top: 13px;
+                  right: 6px;
+                  font-size: 12px;
+                }
+            - type: custom:slider-button-card
+              entity: light.living_room_lamps
+              slider:
+                direction: left-right
+                background: gradient
+                use_state_color: true
+                use_percentage_bg_opacity: true
+                show_track: false
+                toggle_on_click: false
+                force_square: false
+              show_name: true
+              show_state: false
+              compact: true
+              icon:
+                show: true
+                use_state_color: false
+                icon: mdi:sofa
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/salon
+              action_button:
+                mode: custom
+                icon: mdi:chevron-right
+                show_spinner: false
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/salon
+              style: |
+                :host {
+                  font-weight: 600;
+                  margin-left: 7px !important;
+                }
+                ha-card > div > div.text {
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin-top: -1px;
+                  letter-spacing: -0.2px;
+                }
+                div.icon {
+                  margin: 4px 2px 4px 4px;
+                  font-size: 10px;
+                }
+                ha-card > div > div.text > div {
+                  overflow: visible;
+                }
+                ha-card { 
+                  border-radius: 26px !important;
+                }
+                ha-card > div > div.action {
+                  position: absolute;
+                  top: 13px;
+                  right: 6px;
+                  font-size: 12px;
+                }
+      style: |
+        ha-card { 
+          margin: 14px 20px !important;
+          background: none;
+        }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: custom:slider-button-card
+              entity: light.living_room_lamps
+              slider:
+                direction: left-right
+                background: gradient
+                use_state_color: true
+                use_percentage_bg_opacity: true
+                show_track: false
+                toggle_on_click: false
+                force_square: false
+              show_name: true
+              show_state: false
+              compact: true
+              icon:
+                show: true
+                use_state_color: false
+                icon: mdi:bed
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/chambre
+              action_button:
+                mode: custom
+                icon: mdi:chevron-right
+                show_spinner: false
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/chambre
+              style: |
+                :host {
+                  font-weight: 600;
+                  margin-right: 7px !important;
+                }
+                ha-card > div > div.text {
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin-top: -1px;
+                  letter-spacing: -0.2px;
+                }
+                div.icon {
+                  margin: 4px 2px 4px 4px;
+                  font-size: 10px;
+                }
+                ha-card > div > div.text > div {
+                  overflow: visible;
+                }
+                ha-card { 
+                  border-radius: 26px !important;
+                }
+                ha-card > div > div.action {
+                  position: absolute;
+                  top: 13px;
+                  right: 6px;
+                  font-size: 12px;
+                }
+            - type: custom:slider-button-card
+              entity: light.living_room_lamps
+              name: Salle de douche
+              slider:
+                direction: left-right
+                background: gradient
+                use_state_color: true
+                use_percentage_bg_opacity: true
+                show_track: false
+                toggle_on_click: false
+                force_square: false
+              show_name: true
+              show_state: false
+              compact: true
+              icon:
+                show: true
+                use_state_color: false
+                icon: mdi:shower-head
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/salle_de_douche
+              action_button:
+                mode: custom
+                icon: mdi:chevron-right
+                show_spinner: false
+                tap_action:
+                  action: navigate
+                  navigation_path: /mobile-dashboard/salle_de_douche
+              style: |
+                :host {
+                  font-weight: 600;
+                  margin-left: 7px !important;
+                }
+                ha-card > div > div.text {
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin-top: -1px;
+                  letter-spacing: -0.2px;
+                }
+                div.icon {
+                  margin: 4px 2px 4px 4px;
+                  font-size: 10px;
+                }
+                ha-card > div > div.text > div {
+                  overflow: visible;
+                }
+                ha-card { 
+                  border-radius: 26px !important;
+                }
+                ha-card > div > div.action {
+                  position: absolute;
+                  top: 13px;
+                  right: 6px;
+                  font-size: 12px;
+                }
+      style: |
+        ha-card { 
+          margin: 14px 20px !important;
+          background: none;
+        }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: grid
+              square: true
+              columns: 2
+              cards:
+                - type: custom:vertical-stack-in-card
+                  cards:
+                    - type: custom:weather-card
+                      entity: weather.openweathermap
+                      icons: /local/icons/weather_icons/animated/
+                      number_of_forecasts: '3'
+                      current: false
+                      details: false
+                      forecast: true
+                      hourly_forecast: false
+                      style: |
+                        ha-card { 
+                          background: none;
+                          box-shadow: none;
+                          padding: 0 !important;
+                          font-size: 12px;
+                        }
+                        div.precipitation {
+                          display: none;
+                        }
+                        div.precipitation_probability {
+                          display: none;
+                        }
+                        i.icon {
+                          transform: scale(0.17);
+                          transform-origin: 0 19.5%;
+                          margin-left: -1.4em !important;
+                          position: absolute;
+                          top: -18px;
+                          padding: 0;
+                          height: 240% !important;
+                          width: 240% !important;
+                        }
+                        .dayname:after {
+                          content:'';
+                          height: 3.4em;
+                          width: 3.5em;
+                          display: block;
+                          margin-top: -20px;
+                        }
+                        .dayname {
+                          margin-top: -6px
+                        }
+                        div.day {
+                          border-right: 0.06em solid rgb(26,137,245,0.3);
+                        }
+                        div.lowTemp {
+                          margin-top: -10px;
+                        }
+                    - type: custom:atomic-calendar-revive
+                      entities:
+                        - entity: calendar.calendrier_google
+                          name: My Calendar
+                          color: white
+                          max_results: 12
+                          icon: mdi:calendar
+                        - entity: calendar.personnel
+                          name: Personnel
+                          color: white
+                          icon: mdi:calendar
+                        - entity: calendar.jours_feries_en_belgique
+                          name: Jours fériés en belgique
+                          color: white
+                          icon: mdi:party-popper
+                        - entity: calendar.geraldine_et_quentin
+                          name: Géraldine et quentin
+                          color: white
+                          icon: mdi:calendar
+                      firstDayOfWeek: 1
+                      refreshInterval: 60
+                      showDate: false
+                      hideDuplicates: false
+                      hideFinishedEvents: true
+                      showCurrentEventLine: false
+                      showProgressBar: false
+                      showMonth: true
+                      showWeekDay: false
+                      showDescription: false
+                      disableEventLink: true
+                      showFullDayProgress: false
+                      showEventIcon: false
+                      showHiddenText: false
+                      showCalendarName: false
+                      showWeekNumber: false
+                      calShowDescription: false
+                      showLastCalendarWeek: false
+                      dimFinishedEvents: true
+                      disableCalLink: true
+                      disableCalLocationLink: true
+                      disableCalEventLink: truemaxEventCount
+                      noEventsForNextDaysText: Aucun événement dans les prochains jours
+                      showLoader: false
+                      maxEventCount: 4
+                      cardHeight: 70px
+                      maxDaysToShow: 90
+                      showDatePerEvent: true
+                      language: fr
+                      style: |
+                        ha-card { 
+                          width: 100%;
+                          padding: 10px 14% 0 0   !important;
+                          position: absolute;
+                          bottom: 6%;
+                          background: none !important;
+                        }
+                        ha-card > div > table > tbody > tr.daywrap {
+                          border-top: none;
+                        }
+                        ha-card > div > table > tbody {
+                          padding: 0px !important;
+                        }
+                        ha-card > div > table {
+                          margin-top: -10px !important;
+                          animation: scroll 15s ease infinite;
+                        }
+                        ha-card > div > table > tbody > tr > td {
+                          padding-bottom: 20px !important;
+                          padding-top: 2px !important;
+                        }
+                        ha-card > div {
+                          padding-top: 0.3em !important;
+                          margin: 0 !important;
+                        }
+                        div.event-main {
+                          width: 100% !important;
+                          #white-space: nowrap !important;
+                          #overflow: visible !important;
+                          text-overflow: ellipsis !important;
+                          height: 3em !important;
+                        }
+                        ha-card > div > table > tbody {
+                          font-size: 13px;
+                          line-height: 18px;
+                        }
+                        div.relativeTime {
+                          display: none;
+                        }
+                        .hoursHTML {
+                          overflow: hidden;
+                          position: absolute;
+                          display: -webkit-box;
+                          -webkit-line-clamp: 1; /* number of lines to show */
+                          line-clamp: 1; 
+                          -webkit-box-orient: vertical;
+                        }
+                        .event-location {
+                          display: none !important;
+                        }
+                        div.event-main {
+                          overflow: hidden;
+                          display: -webkit-box;
+                          -webkit-line-clamp: 2; /* number of lines to show */
+                          line-clamp: 2; 
+                          -webkit-box-orient: vertical;
+                        }
+                        @keyframes scroll {
+                          0% { opacity: 0; transform: translateY(0); }
+                          3% { opacity: 1; transform: translateY(0); }
+                          20% { opacity: 1; transform: translateY(0); }
+                          23% { opacity: 0; transform: translateY(0); }
+                          26% { transform: translateY(calc(-25%)); opacity: 0;}
+                          29% { transform: translateY(calc(-25%)); opacity: 1;}
+                          46% { transform: translateY(calc(-25%)); opacity: 1;}
+                          49% { transform: translateY(calc(-25%)); opacity: 0;}
+                          52% { transform: translateY(calc(-50%)); opacity: 0;}
+                          55% { transform: translateY(calc(-50%)); opacity: 1;}
+                          72% { transform: translateY(calc(-50%)); opacity: 1;}
+                          75% { transform: translateY(calc(-50%)); opacity: 0;}
+                          78% { transform: translateY(calc(-75%)); opacity: 0;}
+                          81% { transform: translateY(calc(-75%)); opacity: 1;}
+                          97% { transform: translateY(calc(-75%)); opacity: 1;}
+                          100% { transform: translateY(calc(-75%)); opacity: 0;}
+                        }
+                  style: |
+                    ha-card { 
+                      box-shadow: none;
+                      height: 100% !important;
+                      padding: 12% 7%;
+                    }
+                - type: custom:vertical-stack-in-card
+                  cards:
+                    - type: conditional
+                      conditions:
+                        - entity: media_player.musique
+                          state: 'off'
+                      card:
+                        type: custom:paper-buttons-row
+                        buttons:
+                          - entity: switch.deezer
+                            icon: mdi:music
+                            layout: icon_name
+                            name: Flow Deezer
+                            state_styles:
+                              'off':
+                                button:
+                                  position: absolute;
+                                  top: 50%;
+                                  border-radius: 100%;
+                                  width: 42px
+                                  height: 42px
+                                  margin-top: '-46px'
+                                  filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2))
+                                  background: >-
+                                    var( --ha-card-background,
+                                    var(--card-background-color, white) );
+                                  background-size: 140% 70%
+                                  background-repeat: no-repeat
+                                  background-position: 50% 100%
+                                  background-color: '#3e4c69'
+                                icon:
+                                  margin-top: 44px
+                                name:
+                                  margin-top: 20px
+                                  width: 100px
+                              'on':
+                                button:
+                                  display: none;
+                    - type: conditional
+                      conditions:
+                        - entity: media_player.musique
+                          state_not: 'off'
+                      card:
+                        type: custom:mini-media-player
+                        volume_stateless: true
+                        name: Salon
+                        group: false
+                        volume_step: '3'
+                        entity: media_player.musique
+                        sound_mode: full
+                        artwork: full-cover
+                        toggle_power: false
+                        source: icon
+                        hide:
+                          name: true
+                          source: true
+                        style: >
+                          ha-card {
+                            height: 100% !important;
+                            width: 100% !important;
+                            position: absolute !important;
+                          }   .flex {
+                            display: block;
+                            {% if not is_state('media_player.musique','off') %}
+                            filter: drop-shadow(0px 2px 2px rgba(0,0,0,1));
+                            {% else %}
+                            {% endif %}
+                          }   ha-card.--has-artwork .cover{
+                            opacity: 0.9;
+                          }  .entity__info__media {
+                            opacity: 1 !important;
+                            padding-right: 16px;
+                            overflow: hidden;
+                            height: 4.4em;
+                            height: 100%;
+                          }  div.entity__icon {
+                            {% if not is_state('media_player.musique','off') %}
+                            display: none;
+                            {% endif %}
+                          }   mmp-media-controls {
+                            {% if not is_state('media_player.musique','off') %}
+                            filter: drop-shadow(0px 2px 2px rgba(0,0,0,1));
+                            flex-wrap: wrap-reverse !important;
+                            {% endif %}
+                          } ha-card > div.mmp-player {
+                            padding: 12px !important;
+                            {% if not is_state('media_player.musique','off') %}
+                            {% else %}
+                            #display: none !important;
+                            {% endif %}
+                          }   ha-card > div.mmp-player {
+                            {% if is_state_attr('media_player.salon','media_content_id', 'Bluetooth') %}
+                            position: relative;
+                            height: 20vh;
+                            {% else %}
+                            position: absolute;
+                            align-self: flex-start;
+                            height: 100%;
+                            {% endif %}
+                            background: radial-gradient(circle, rgba(0,0,0,0) 10%, rgba(0,0,0,0.6) 100%) !important;
+                            font-size: 0.9em !important;
+                          }   ha-card > div.mmp-player > div.mmp-player__adds
+                          {
+                            position: absolute;
+                            bottom: 14px;
+                            padding: 0 16px 0 0;
+                          }   div.flex.mmp-media-controls__media {
+                            margin-bottom: -5px !important;
+                          }
+                  style: |
+                    ha-card {
+                      height: 100% !important;
+                      width: 100% !important;
+                    } 
+      style: |
+        ha-card { 
+          margin: 14px 20px !important;
+          background: none;
+        }
+        .type-custom-vertical-stack-in-card {
+          overflow: visible !important;
+        }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: grid
+              square: true
+              columns: 2
+              cards:
+                - type: entities
+                  show_header_toggle: false
+                  style: |
+                    * {
+                      padding: 0px;
+                    }
+                    h1.card-header {
+                      padding: 10px;
+                      margin-top: -4px
+                    }
+                    #states {
+                      padding: 10px;
+                    }
+                    ha-card {
+                      {% if is_state('person.jordan_maxwell','Home') %}
+                      background: radial-gradient(at bottom, rgba(255,255,255, 0.26) 0%, rgba(43,55,78,0) 70%);
+                      background-size: 140% 70%;
+                      background-repeat: no-repeat;
+                      background-position: 50% 100%;
+                      background-color: #3e4c69;
+                      transition: background 1.5s, background-position 2s, background-color 1.5s;
+                      transition-delay: 0.6s;
+                      {% else %}
+                      transition: background 1.5s;
+                      transition-delay: 0.2s;
+                      background-color: var( --ha-card-background, var(--card-background-color, white) );
+                      background-size: 140% 70%;
+                      background-position: 50% 360%;
+                      {% endif %}
+                    }
+                  entities:
+                    - entity: person.jordan_maxwell
+                      state_color: false
+                      name: ‎
+                      style: |
+                        hui-generic-entity-row {
+                          margin-bottom: 14px;
+                          margin-top: -2px;
+                          padding: 0.6em;
+                        }
+                    - type: section
+                      label: Jordan Maxwell
+                      style: |
+                        div.divider { 
+                          display: none;
+                        }
+                        div.label { 
+                          margin-top: -12px;
+                          margin-bottom: 10px;
+                          font-size: 17px;
+                          font-weight: 600
+                        }
+                    - entity: sensor.iphone_de_geraldine_geocoded_location
+                      name: ‎
+                      icon: none
+                      style: |
+                        * {
+                          display: inline !important;
+                          position: absolute !important;
+                          top: 0px;
+                          left: 0 !important;
+                          width: 94%;
+                          text-align: left !important;
+                          padding: 0 0 0 8px; 
+                          margin-top: -3px;
+                          opacity: 0.8;
+                          font-size: 0.9em;
+                          line-height: 1.4em;
+                        }
+                        style {
+                          opacity: 0 !important;
+                        }
+                  footer:
+                    type: custom:paper-buttons-row
+                    styles:
+                      justify-content: space-between;
+                      padding: 8px;
+                      width: auto;
+                      margin-top: '-6px;'
+                      margin-bottom: 0px;
+                      filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5));
+                    buttons:
+                      - name: >-
+                          {{
+                          states("sensor.pixel_8_pro_battery_level")
+                          }}%
+                        entity: sensor.pixel_8_pro_battery_level
+                      - name: false
+                        icon: mdi:plus
+                        tap_action:
+                          action: navigate
+                          navigation_path: /mobile-dashboard/jordan_maxwell
+                - type: entities
+                  show_header_toggle: false
+                  style: |
+                    * {
+                      padding: 0px;
+                    }
+                    h1.card-header {
+                      padding: 10px;
+                      margin-top: -4px
+                    }
+                    #states {
+                      padding: 10px !important;
+                    }
+                    ha-card {
+                      {% if is_state('person.dana_taylor','Home') %}
+                      background: radial-gradient(at bottom, rgba(255,255,255, 0.26) 0%, rgba(43,55,78,0) 70%);
+                      background-size: 140% 70%;
+                      background-repeat: no-repeat;
+                      background-position: 50% 100%;
+                      background-color: #3e4c69;
+                      transition: background 1.5s, background-position 2s, background-color 1.5s;
+                      transition-delay: 0.6s;
+                      {% else %}
+                      transition: background 1.5s;
+                      transition-delay: 0.2s;
+                      background-color: var( --ha-card-background, var(--card-background-color, white) );
+                      background-size: 140% 70%;
+                      background-position: 50% 360%;
+                      {% endif %}
+                    }
+                  entities:
+                    - entity: person.dana_taylor
+                      state_color: false
+                      name: ‎
+                      style: |
+                        hui-generic-entity-row {
+                          margin-bottom: 14px;
+                          margin-top: -2px;
+                          padding: 0.6em;
+                        }
+                    - type: section
+                      label: Dana Taylor
+                      style: |
+                        div.divider { 
+                          display: none;
+                        }
+                        div.label { 
+                          margin-top: -12px;
+                          margin-bottom: 10px;
+                          font-size: 17px;
+                          font-weight: 600
+                        }
+                    - entity: sensor.mi_9_geocoded_location
+                      name: ‎
+                      icon: none
+                      style: |
+                        * {
+                          display: inline !important;
+                          position: absolute !important;
+                          top: 0px;
+                          left: 0 !important;
+                          width: 94%;
+                          text-align: left !important;
+                          padding: 0 0 0 8px; 
+                          margin-top: -3px;
+                          opacity: 0.8;
+                          font-size: 0.9em;
+                          line-height: 1.4em;
+                        }
+                        style {
+                          display: none !important;
+                          opacity: 0 !important;
+                        }
+                  footer:
+                    type: custom:paper-buttons-row
+                    styles:
+                      justify-content: space-between;
+                      padding: 8px;
+                      width: auto;
+                      margin-top: '-6px;'
+                      margin-bottom: 0px;
+                      filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5));
+                    buttons:
+                      - name: '{{ states("sensor.mi_9_battery_level") }}%'
+                        entity: sensor.mi_9_battery_level
+                      - name: false
+                        icon: mdi:plus
+                        tap_action:
+                          action: navigate
+                          navigation_path: /mobile-dashboard/dana_taylor
+      style: |
+        ha-card { 
+          margin: 14px 20px !important;
+          background: none;
+          box-shadow: none;
+        }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: grid
+              square: true
+              columns: 2
+              cards:
+                - type: entities
+                  show_header_toggle: false
+                  style: |
+                    * {
+                      padding: 0px;
+                    }
+                    h1.card-header {
+                      padding: 10px;
+                      margin-top: -4px
+                    }
+                    #states {
+                      padding: 10px;
+                    }
+                    ha-card {
+                      {% if is_state('person.hailey_maxwell','Home') %}
+                      background: radial-gradient(at bottom, rgba(255,255,255, 0.26) 0%, rgba(43,55,78,0) 70%);
+                      background-size: 140% 70%;
+                      background-repeat: no-repeat;
+                      background-position: 50% 100%;
+                      background-color: #3e4c69;
+                      transition: background 1.5s, background-position 2s, background-color 1.5s;
+                      transition-delay: 0.6s;
+                      {% else %}
+                      transition: background 1.5s;
+                      transition-delay: 0.2s;
+                      background-color: var( --ha-card-background, var(--card-background-color, white) );
+                      background-size: 140% 70%;
+                      background-position: 50% 360%;
+                      {% endif %}
+                    }
+                  entities:
+                    - entity: person.hailey_maxwell
+                      state_color: false
+                      name: ‎
+                      style: |
+                        hui-generic-entity-row {
+                          margin-bottom: 14px;
+                          margin-top: -2px;
+                          padding: 0.6em;
+                        }
+                    - type: section
+                      label: Hailey Maxwell
+                      style: |
+                        div.divider { 
+                          display: none;
+                        }
+                        div.label { 
+                          margin-top: -12px;
+                          margin-bottom: 10px;
+                          font-size: 17px;
+                          font-weight: 600
+                        }
+                    - entity: sensor.iphone_de_geraldine_geocoded_location
+                      name: ‎
+                      icon: none
+                      style: |
+                        * {
+                          display: inline !important;
+                          position: absolute !important;
+                          top: 0px;
+                          left: 0 !important;
+                          width: 94%;
+                          text-align: left !important;
+                          padding: 0 0 0 8px; 
+                          margin-top: -3px;
+                          opacity: 0.8;
+                          font-size: 0.9em;
+                          line-height: 1.4em;
+                        }
+                        style {
+                          opacity: 0 !important;
+                        }
+                  footer:
+                    type: custom:paper-buttons-row
+                    styles:
+                      justify-content: space-between;
+                      padding: 8px;
+                      width: auto;
+                      margin-top: '-6px;'
+                      margin-bottom: 0px;
+                      filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5));
+                    buttons:
+                      - name: >-
+                          {{
+                          states("sensor.pixel_8_pro_battery_level")
+                          }}%
+                        entity: sensor.pixel_8_pro_battery_level
+                      - name: false
+                        icon: mdi:plus
+                        tap_action:
+                          action: navigate
+                          navigation_path: /mobile-dashboard/hailey_maxwell
+      style: |
+        ha-card { 
+          margin: 14px 20px !important;
+          background: none;
+          box-shadow: none;
+        }
+    - type: custom:mod-card
+      card:
+        type: custom:vertical-stack-in-card
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: picture
+                image: /local/images/qr-wifi.png
+                style: |
+                  ha-card { 
+                    box-shadow: none;
+                    background: rgba(0,0,0,0);
+                    height: 75%;
+                    width: 75%;
+                    padding: 20px 0
+                  }
+                  ha-card > img {
+                    border-radius: 26px;
+                  }
+              - type: markdown
+                content: >-
+                  Scan this QR code to connect to **Wi-Fi**.
+
+
+                  <ha-icon icon="mdi:wifi"></ha-icon><ha-icon
+                  icon="mdi:none"></ha-icon>GetYourOwn
+
+
+                  <ha-icon icon="mdi:lock"></ha-icon><ha-icon
+                  icon="mdi:none"></ha-icon>turtleepic826
+                style: |
+                  ha-card { 
+                    box-shadow: none;
+                    padding: 10px;
+                    background: rgba(0,0,0,0);
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    color: white
+                  }
+        card_mod:
+          style: |
+            ha-card { 
+              box-shadow: none;
+              background: rgba(0,0,0,0);
+              margin: 0px 10px 0px 10px;
+            }
+      card_mod:
+        style: |
+          ha-card { 
+            box-shadow: none;
+            background: rgba(0,0,0,0);
+            margin: 0px 10px 0px 10px;
+          }
+    - type: button
+      tap_action:
+        action: navigate
+        navigation_path: /config/dashboard
+      name: Settings
+      show_state: false
+      show_name: false
+      style: |
+        ha-card { 
+          margin: 0 0px 0 15px;
+          box-shadow: none;
+          background: rgba(0,0,0,0);
+          opacity: 0;
+          font-size: 18px;
+          overflow: hidden;    
+        }
+        ha-card > ha-state-icon {
+          height: 0px;
+        }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: custom:decluttering-card
+          template: footer_sticky_menu
+      style: |
+        :host {
+          position: sticky !important;
+          bottom: 26px;
+          margin-bottom: 10px !important;
+          animation: 1.2s position ease-in-out;
+        }
+        @keyframes position {
+          0% { bottom: -80px; }
+          20% { bottom: -80px; }
+          70% { bottom: 26px; }
+          90% { bottom: 24px; }
+          100% { bottom: 26px; }
+        }
+        ha-card { 
+          background: none;
+          border-radius: 26px !important;
+        }
+        :host:before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -26px;
+          left: -8px;
+          padding-right: 16px;
+          height: 130px;
+          width: 100%; 
+          background: linear-gradient(180deg, rgba(45, 56, 76, 0) 0%, rgba(35, 46, 66, 0.85) 50%);
+          pointer-events: none;
+          animation: 1.2s opacity ease-in-out;
+        }
+        @keyframes opacity {
+          0% { opacity: 0; }
+          20% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        ### The sticky position don't work with Decluttering card
+        ### This is why I have to add the CSS here
+        ### If you don't use the UI you can use YAML anchors instead

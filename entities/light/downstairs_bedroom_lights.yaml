@@ -1,0 +1,18 @@
+# Configuration for the Downstairs Bedroom Lights group entity.
+# This entity groups multiple individual light entities into a single control point.
+# 
+# Attributes:
+# - platform: Specifies the platform type, in this case, 'group'.
+# - name: The friendly name for the group entity.
+# - unique_id: A unique identifier for the group entity.
+# - entities: A list of individual light entities that are part of this group.
+
+# Jordan's Room Lighting/Downstairs Bedroom Lighting
+- platform: group
+  name: Downstairs Bedroom Lights
+  unique_id: downstairs_bedroom_lights
+  entities:
+    - light.downstairs_bedroom_ceiling_light_1
+    - light.downstairs_bedroom_ceiling_light_2
+    - light.downstairs_bedroom_ceiling_light_3
+    - light.downstairs_bedroom_ceiling_light_4

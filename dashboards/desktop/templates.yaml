@@ -1,0 +1,305 @@
+header_live_weather_background:
+  card:
+    type: custom:vertical-stack-in-card
+    cards:
+      - type: picture-glance
+        entities: []
+        camera_image: camera.camera_sonnette_mjpeg
+        camera_view: auto
+        image: []
+        style: |
+          ha-card {
+            position: absolute;
+            filter: blur(2px);
+            border-radius: 0 !important;
+            background: none;
+            
+            /* Edit the following lines to adjust your camera or your image */
+            
+            width: 1500px;
+            top: 0px;
+            right: 0px;
+            
+            /* If you don't want to use a camera you can replace [] with an image */
+          }
+    style: |
+      ha-card {
+        position: relative !important;
+        margin-bottom: -164px;
+        height: 164px;
+        margin-top: -8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        background: none;
+        animation: opacity 2s ease-in;
+        border-radius: 0 var(--ha-card-border-radius) 0 0;
+      }
+      ha-card:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -180px;
+        height: 170px;
+        width: 1700px;
+        background: radial-gradient(ellipse at 50% -100%, rgba(35, 46, 66, 0) 25%, rgba(35, 46, 66, 0.8) 55%, rgba(35, 46, 66, 1) 67%);
+      }
+      @media only screen and (max-width: 768px) {
+        ha-card {
+          border-radius: 0 !important;
+        }
+      }
+      @keyframes opacity {
+        0% { opacity: 0; }
+        40% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+header_temperature_graph:
+  card:
+    type: custom:mini-graph-card
+    entities:
+      - entity: sensor.temperature_interior
+        color: null
+    hours_to_show: 24
+    hour24: true
+    animate: true
+    update_interval: 30
+    aggregate_func: avg
+    line_width: 1
+    bar_spacing: 10
+    height: 40
+    group: true
+    show:
+      labels: false
+      fill: false
+      state: false
+      name: false
+      icon: false
+    style: |
+      ha-card {
+        height: 84px;
+        position: absolute;
+        box-shadow: none;
+        background: none;
+        border-radius: 0;
+        opacity: 0.3;
+        margin-bottom: -90px;
+        margin-left: -0.6em;
+        margin-right: -0.6em;
+      }
+header_main:
+  card:
+    type: custom:paper-buttons-row
+    styles:
+      justify-content: space-between
+      background: none
+      margin: 24px 20px 16px
+      text-shadow: 0px 0px 20px var(--card-background-color);
+    buttons:
+      - layout: name_state
+        name: '{{ states(''sensor.day_en'') }}, {{ states(''sensor.date_en'') }}'
+        state: '{{ now().strftime(''%H'') }}:{{ now().strftime(''%M'')}}'
+        styles:
+          name:
+            font-weight: 400
+            font-size: 16px
+            margin-left: 0
+            display: block
+            text-align: left
+            float: left
+            width: 140px
+          button:
+            pointer-events: none
+            align-items: left
+            width: 140px
+            line-height: 1.6em
+          state:
+            font-weight: 700
+            font-size: 30px
+            letter-spacing: '-1px'
+            margin-left: 0
+            display: block
+            text-align: left
+            float: left
+            width: 140px
+      - layout: icon|name_state
+        name: ⌂ {{ states('sensor.temperature_interior') }}°C
+        state: '{{ state_attr(''weather.openweathermap'',''temperature'') }}°C'
+        image: |
+          {% set mapper =
+            { 'breezy':'cloudy',
+              'clear-night':'night',
+              'clear':'day',
+              'mostly-clear':'day',
+              'clear-day':'day',
+              'cloudy':'cloudy',
+              'fog':'fog',
+              'hail':'rainy-7',
+              'haze':'haze',
+              'lightning':'thunder',
+              'mostly-cloudy':'cloudy',
+              'partlycloudy':'cloudy-day-3',
+              'partly-cloudy-day':'partly-cloudy-day',
+              'partly-cloudy-night':'partly-cloudy-night',
+              'rain':'rainy-4',
+              'scattered-showers':'rainy-3',
+              'showers':'rainy-6',
+              'sleet':'sleet',
+              'snow':'snowy-6',
+              'mostly-sunny':'day',
+              'sunny':'day',
+              'thunderstorm':'thunder',
+              'tornado':'tornado',
+              'wind':'wind',
+              'windy':'wind'} %}
+          {% set state = states('weather.maison_2') %}
+          {% set weather = mapper[state] if state in mapper else 'weather' %}
+          {% set path = '/local/icons/weather_icons/animated/' %}
+          {% set ext = '.svg'%}
+            {{[path,weather,ext]|join('')}}
+        styles:
+          name:
+            font-weight: 400
+            font-size: 16px
+            margin-left: 0
+            display: block
+            text-align: right
+            width: 140px
+          button:
+            pointer-events: none
+            align-items: right
+            width: 140px
+            line-height: 1.6em
+          state:
+            font-weight: 600
+            font-size: 30px
+            letter-spacing: '-1px'
+            margin-left: 0
+            display: block
+            text-align: right
+            width: 140px
+          icon:
+            position: absolute
+            left: 2px
+            transform: scale(0.17)
+            transform-origin: 0 19.5%
+            top: '-48px;'
+            padding: 0;
+            height: 380px !important;
+            width: 380px !important;
+header_conditional_camera:
+  card:
+    type: conditional
+    conditions:
+      - entity: binary_sensor.sonnette_motion
+        state: 'on'
+    card:
+      type: custom:vertical-stack-in-card
+      cards:
+        - type: custom:frigate-card
+          cameras:
+            - camera_entity: camera.sonnette_pir
+              live_provider: frigate-jsmpeg
+              title: Entrée
+          menu:
+            buttons:
+              frigate:
+                enabled: false
+            style: none
+      style: |
+        ha-card {
+          margin: 15px 20px;
+          overflow: hidden !important;
+          border-radius: 24px !important;
+        }
+footer_sticky_menu:
+  card:
+    type: entities
+    entities:
+      - type: custom:paper-buttons-row
+        buttons:
+          - entity: input_boolean.dont_disturb_mode
+            layout: icon
+            name: Silence
+            style:
+              button:
+                width: 42px
+                height: 42px
+              icon:
+                background: var(--background-color)
+                padding: 10px 26px
+                border-radius: 26px
+                margin-top: 0
+              name:
+                margin-top: 20px
+          - layout: icon
+            icon: mdi:window-shutter
+            name: Volets
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-overview/volets
+            style:
+              button:
+                width: 42px
+                height: 42px
+              icon:
+                margin-top: 0
+              name:
+                margin-top: 20px
+          - layout: icon
+            icon: mdi:cart-outline
+            name: Liste
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-overview/liste
+            style:
+              button:
+                width: 42px
+                height: 42px
+              icon:
+                margin-top: 0
+              name:
+                margin-top: 20px
+          - icon: mdi:video
+            layout: icon
+            name: Sécurité
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-overview/securite
+            style:
+              button:
+                width: 42px
+                height: 42px
+              icon:
+                margin-top: 0
+              name:
+                margin-top: 20px
+          - layout: icon
+            icon: mdi:cog
+            name: Réglages
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-overview/reglages
+            style:
+              button:
+                width: 42px
+                height: 42px
+              icon:
+                margin-top: 0
+              name:
+                margin-top: 20px
+        style: |
+          div.flex-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: -14px !important;   
+          }
+    style: |
+      ha-card { 
+        margin-bottom: 10px !important;
+        padding: 0 16px;
+        border-radius: 34px !important;
+        margin-left: 20px;
+        margin-right: 20px;
+      }

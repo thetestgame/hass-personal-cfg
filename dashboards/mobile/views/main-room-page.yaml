@@ -1,0 +1,252 @@
+- theme: noctis
+  icon: ''
+  path: living_room
+  title: Living Room
+  visible:
+    - user: a27a825440914ad7a919367c2e53793e
+    - user: aadd52d881af46bca495e279bee867bf
+    - user: 10a78a75e63f4c5ba22a81742f59b925
+  type: sidebar
+  subview: true
+  badges: []
+  cards:
+    - type: custom:decluttering-card
+      template: header_live_weather_background
+    - type: custom:decluttering-card
+      template: header_temperature_graph
+    - type: custom:decluttering-card
+      template: header_main
+    - type: custom:decluttering-card
+      template: header_conditional_camera
+    - type: entities
+      entities:
+        - type: custom:paper-buttons-row
+          buttons:
+            - icon: mdi:home-lightbulb
+              layout: icon|name
+              name: Living Room
+              style:
+                name:
+                  margin-left: 18px
+                  font-size: 18px
+                  font-weight: 600
+            - icon: mdi:close
+              layout: icon
+              tap_action:
+                action: navigate
+                navigation_path: /
+              style:
+                icon:
+                  '--mdc-icon-size': 34px
+          style: |
+            div.flex-box {
+              margin-top: -6px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+        - type: section
+          label: Ambiance
+        - type: custom:paper-buttons-row
+          buttons:
+            - entity: switch.ambiance_auto
+              name: Auto
+            - name: '|'
+              style:
+                button:
+                  color: '#262e41'
+            - entity: script.ambiance_video
+              name: false
+              style:
+                button:
+                  color: |-
+                    {% if is_state('input_select.ambiances', 'Cinéma') %}
+                      var(--accent-color)
+                    {% else%}
+                      white
+                    {% endif %}
+            - entity: script.ambiance_horreur
+              name: false
+              style:
+                button:
+                  color: >-
+                    {% if is_state('input_select.ambiances', 'Cinéma sombre')
+                    %}
+                      var(--accent-color)
+                    {% else%}
+                      white
+                    {% endif %}
+            - name: '|'
+              style:
+                button:
+                  color: '#262e41'
+            - entity: script.ambiance_detente
+              name: false
+              style:
+                button:
+                  color: |-
+                    {% if is_state('input_select.ambiances', 'Détente') %}
+                      var(--accent-color)
+                    {% else%}
+                      white
+                    {% endif %}
+            - entity: script.ambiance_clair
+              name: false
+              style:
+                button:
+                  color: |-
+                    {% if is_state('input_select.ambiances', 'Clair') %}
+                      var(--accent-color)
+                    {% else%}
+                      white
+                    {% endif %}
+            - entity: script.ambiance_fete
+              name: false
+              style:
+                button:
+                  color: |-
+                    {% if is_state('input_select.ambiances', 'Fête') %}
+                      var(--accent-color)
+                    {% else%}
+                      white
+                    {% endif %}   
+            - entity: script.ambiance_musique
+              name: false
+              style:
+                button:
+                  color: |-
+                    {% if is_state('input_select.ambiances', 'Musique') %}
+                      var(--accent-color)
+                    {% else%}
+                      white
+                    {% endif %}  
+        - entity: input_select.ambiances
+        - type: section
+        - type: custom:light-entity-card
+          entity: light.living_room_lamps
+          shorten_cards: false
+          consolidate_entities: true
+          child_card: true
+          hide_header: false
+          header: All Lamps
+          color_wheel: true
+          persist_features: true
+          brightness: true
+          color_temp: true
+          white_value: false
+          color_picker: true
+          smooth_color_wheel: true
+          speed: false
+          intensity: false
+          force_features: false
+          show_slider_percent: false
+          full_width_sliders: true
+          brightness_icon: weather-sunny
+          white_icon: file-word-box
+          temperature_icon: thermometer
+          speed_icon: speedometer
+          intensity_icon: transit-connection-horizontal
+          effects_list: false
+          style: >
+            ha-card {
+              margin: 14px 8px !important;
+            }
+            ha-card > div.light-entity-card__header >
+            div.light-entity-card__title {
+              font-size: 14px !important;
+              font-weight: 500;
+            }
+        - type: custom:rgb-light-card
+          entity: light.living_room
+          justify: around
+          size: 23
+          colors:
+            - color_temp: 153
+              brightness: 255
+              icon_color: white
+            - color_temp: 357
+              brightness: 255
+            - color_temp: 451
+              brightness: 255
+            - rgb_color:
+                - 255
+                - 170
+                - 0
+              brightness: 255
+              icon_color: linear-gradient(15deg, rgb(255,170,0), rgb(255,225,165))
+            - rgb_color:
+                - 255
+                - 0
+                - 0
+              brightness: 255
+              icon_color: linear-gradient(15deg, red, rgb(255,100,100))
+            - rgb_color:
+                - 244
+                - 38
+                - 255
+              brightness: 255
+              icon_color: linear-gradient(15deg, rgb(244,38,255), rgb(255,138,255))
+            - rgb_color:
+                - 0
+                - 222
+                - 255
+              brightness: 255
+              icon_color: linear-gradient(15deg, rgb(0,222,255), rgb(140,240,255))
+            - rgb_color:
+                - 0
+                - 0
+                - 255
+              brightness: 255
+              icon_color: linear-gradient(15deg, blue, rgb(100,100,255))
+          style: |
+            * {
+              margin-bottom: 6px !important;
+            }
+      style: |
+        ha-card {
+          margin: 14px 20px 28px !important;
+        }
+    - type: custom:vertical-stack-in-card
+      cards:
+        - type: custom:decluttering-card
+          template: footer_sticky_menu
+      style: |
+        :host {
+          position: sticky !important;
+          bottom: 26px;
+          margin-bottom: 10px !important;
+          animation: 1.2s position ease-in-out;
+        }
+        @keyframes position {
+          0% { bottom: -80px; }
+          20% { bottom: -80px; }
+          70% { bottom: 26px; }
+          90% { bottom: 24px; }
+          100% { bottom: 26px; }
+        }
+        ha-card { 
+          background: none;
+          border-radius: 26px !important;
+          margin-top: 50%;
+        }
+        :host:before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -26px;
+          left: -8px;
+          padding-right: 16px;
+          height: 130px;
+          width: 100%; 
+          background: linear-gradient(180deg, rgba(45, 56, 76, 0) 0%, rgba(35, 46, 66, 0.85) 50%);
+          pointer-events: none;
+          animation: 1.2s opacity ease-in-out;
+        }
+        @keyframes opacity {
+          0% { opacity: 0; }
+          20% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        ### The sticky position don't work with Decluttering card
+        ### This is why I have to add the CSS here
+        ### If you don't use the UI you can use YAML anchors instead
