@@ -9,9 +9,6 @@
 # - Defines custom dashboards for different devices (e.g., desktop and mobile).
 # - Each dashboard has its own configuration, including mode, title, icon, visibility in the sidebar, filename, and admin requirements.
 
-# Set our mode to yaml.
-mode: yaml
-
 # Load our custom resources from the www folder.
 # Most of these were installed with HACS.
 #
@@ -49,23 +46,3 @@ resources:
     url: /local/community/vertical-stack-in-card/vertical-stack-in-card.js
   - type: module
     url: /local/community/weather-card/weather-card.js
-
-# Load our custom dashboards.
-dashboards:
-  # Configuration for a custom desktop dashboard.
-  desktop-dashboard:
-    mode: yaml
-    title: Desktop Dashboard
-    icon: mdi:desktop-mac-dashboard
-    show_in_sidebar: true
-    filename: dashboards/desktop/layout.yaml
-    require_admin: false
-
-  # Configuration for a custom mobile dashboard.
-  mobile-dashboard:
-    mode: yaml
-    title: Mobile Dashboard
-    icon: mdi:cellphone
-    show_in_sidebar: true
-    filename: dashboards/mobile/layout.yaml
-    require_admin: false

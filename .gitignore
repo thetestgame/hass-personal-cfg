@@ -183,7 +183,6 @@ dlib_unknown_faces
 .ring_cache.pickle
 .spotify-token-cache
 
-dwains-dashboard/
 custom_components/
 addons_autoscripts/
 addons_config/
